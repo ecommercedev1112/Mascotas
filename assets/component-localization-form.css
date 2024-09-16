@@ -224,6 +224,7 @@ noscript .localization-selector.link {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  display: none;
 }
 
 .desktop-localization-wrapper .localization-selector + .disclosure__list-wrapper {

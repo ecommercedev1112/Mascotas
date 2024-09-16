@@ -56,6 +56,11 @@
           {{ section.settings.title }}
         </h2>
       {%- endif -%}
+      {%- if section.settings.subtitle != blank -%}
+        <h4 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {{ section.settings.subtitle }}
+        </h4>
+      {%- endif -%}
       {%- if section.settings.description != blank
         or section.settings.show_description
         and section.settings.collection.description != empty
@@ -176,6 +181,12 @@
       "id": "title",
       "default": "Featured collection",
       "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "text",
+      "id": "subtile",
+      "label": "t:sections.featured-collection.settings.subtitle.label",
+      "default": "collection"
     },
     {
       "type": "select",

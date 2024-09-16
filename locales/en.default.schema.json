@@ -718,6 +718,9 @@
         "title": {
           "label": "Heading"
         },
+        "subtitle": {
+          "label": "Sub title"
+        },
         "description": {
           "label": "Description"
         },
@@ -3322,6 +3325,43 @@
       },
       "presets": {
         "name": "Collapsible content"
+      }
+    },
+    "section-image-text": {
+      "name": "Multi image text",
+      "settings": {
+        "title": {
+          "label": "Title"
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Column",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "title": {
+              "label": "Title"
+            },
+            "content": {
+              "label": "Content"
+            },
+            "button_label": {
+              "label": "Button label",
+              "info": "Leave the label blank to hide the button."
+            },
+            "button_link": {
+              "label": "Button link"
+            },
+            "outline_button": {
+              "label": "Use outline button style"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Multi image text column"
       }
     }
   }

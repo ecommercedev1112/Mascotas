@@ -1,0 +1,102 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.center-header {
+    border-bottom: 1px solid #E7E7E7;
+    width: 100%;
+}
+.center-header__wrapper {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    padding: 2rem 8rem;
+    align-items: center;
+}
+.header__inline-menu .list-menu--inline {
+    justify-content: space-between;
+    gap: 12rem;
+    padding: 9px 0;
+}
+.header__icon.header__icon--search {
+    width: 16rem;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    height: 2.8rem;
+}
+.header__icon.header__icon--search svg {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.header__icon.header__icon--search.link {
+    text-decoration: unset;
+}
+.header__icon.header__icon--search span {
+    height: 100%;
+    width: 100%;
+    justify-content: start;
+    gap: 8px;
+    padding: 0 0 4px 4px;
+}
+.header__icon.header__icon--search p.desktop {
+    margin: 0;
+}
+.header__icon.header__icon--cart {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+.header__icons.header__icons--localization {
+    width: 160px;
+    justify-content: space-between;
+}
+.header__icon.header__icon--account {
+    justify-content: start;
+    height: 24px;
+}
+.header__icon.header__icon--account.link {
+    text-decoration: none;
+}
+
+@media(max-width: 768px) {
+    .header__icon.header__icon--search p.desktop {
+        display: none;
+    }
+    .header {
+        padding: 0 30px;
+        flex-direction: row;
+    }
+    header-drawer {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .center-header {
+        width: 100%;
+        border-bottom: unset;
+    }
+    .center-header__wrapper {
+        padding: 0;
+    }
+    .center-header__wrapper .header__search {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__icon.header__icon--search {
+        width: 100%;
+        border-bottom: unset;
+    }
+    .header__icon.header__icon--search span {
+        padding: 0;
+    }
+    .header__icons.header__icons--localization {
+        width: 20%;
+        justify-content: center;
+    }
+}

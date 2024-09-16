@@ -36,28 +36,26 @@
         "easy_content_builder_section_settings_QgDr6W": {
           "type": "shopify:\/\/apps\/easy-content-builder\/blocks\/section-settings\/08c79414-ca28-4781-a647-2921b7943a0b",
           "settings": {
-            "fullwidth": true,
-            "mw": "1300px",
-            "mw_mobile": "",
             "layout": "one",
             "layout_mobile": "one",
             "column_main": 50,
             "column_gap": 20,
             "row_gap": 0,
+            "pt": "",
+            "pb": "",
+            "fullwidth": true,
+            "mw": "1300px",
+            "mw_mobile": "",
+            "container_bg_color": "#ced4d5",
+            "text_color": "",
+            "container_border_radius": 0,
             "bg_color": "",
             "bg_image_repeat": "no",
             "bg_image_position": "top",
             "bg_image_width": 100,
             "bg_parallax": "",
             "mask_color": "",
-            "mask_opacity": 0.5,
-            "container_bg_color": "#ced4d5",
-            "container_border_radius": 0,
-            "text_color": "",
-            "pt": "",
-            "pb": "",
-            "container_pt": "30px",
-            "container_pb": "30px"
+            "mask_opacity": 0.5
           }
         }
       },

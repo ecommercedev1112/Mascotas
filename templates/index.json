@@ -50,6 +50,7 @@
             "btn_target": "_self",
             "border_rounded": false,
             "bg_color": "",
+            "vertical_align": "top",
             "max_width": "1200",
             "scrollspy": "n",
             "margin": "medium",
@@ -61,12 +62,12 @@
           "disabled": true,
           "settings": {
             "source": "manual",
+            "limit": 12,
             "products": [
               "best-buddy-shirt-dog-wear",
               "best-buddy-teal-shirt-dog-wear"
             ],
             "collection": "lading-page-collection",
-            "limit": 12,
             "collection_list": [
               "landing-page-collection-2",
               "lading-page-collection"
@@ -110,7 +111,9 @@
             "container_bg_color": "#f3f3f3",
             "text_color": "",
             "container_border_radius": 0,
+            "container_padding": "",
             "bg_color": "",
+            "bg_image_size": "cover",
             "bg_image_repeat": "no",
             "bg_image_position": "top",
             "bg_image_width": 100,
@@ -136,12 +139,14 @@
         "easy_content_builder_section_settings_9iiFe4",
         "easy_content_builder_custom_html_YRWk4m"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
     },
     "171670943825f88667": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -160,6 +165,102 @@
         "headingcus1": "Mascotas elevates everyday dog wear with exquisitely crafted garments, prioritizing comfort and canine couture.",
         "headingcus11": "Shop Now",
         "button-l": ""
+      }
+    },
+    "image_banner_QDi9Fm": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_jXgTDY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h2"
+          }
+        },
+        "text_MUwLHe": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_XyJct8": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jXgTDY",
+        "text_MUwLHe",
+        "buttons_XyJct8"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hero.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "section_image_text_hHNqXh": {
+      "type": "section-image-text",
+      "blocks": {
+        "column_XjBfTz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons_health.gif",
+            "title": "Health and Well-being",
+            "content": "<p>We use only the finest, pet-safe materials: 100% organic Peruvian Pima cotton luxurious cashmere.<\/p>",
+            "button_label": "shop",
+            "button_link": "shopify:\/\/collections",
+            "button_style_secondary": true
+          }
+        },
+        "column_QCUJpX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons_comfort.gif",
+            "title": "Comfort and Fit",
+            "content": "<p>We developed detailed size guides and sizing consultation service to ensure a perfect fit for various breeds and sizes.<\/p>",
+            "button_label": "shop",
+            "button_link": "shopify:\/\/collections",
+            "button_style_secondary": true
+          }
+        },
+        "column_XFwRic": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons_luxary.gif",
+            "title": "Luxury and Exclusivity:",
+            "content": "<p>We use only the finest, pet-safe materials: 100% organic Peruvian Pima cotton luxurious cashmere.<\/p>",
+            "button_label": "shop",
+            "button_link": "shopify:\/\/collections",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "column_XjBfTz",
+        "column_QCUJpX",
+        "column_XFwRic"
+      ],
+      "settings": {
+        "title": "what we care about",
+        "padding_top": 80,
+        "padding_bottom": 50
       }
     },
     "featured_collection": {
@@ -182,11 +283,11 @@
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": true,
+        "show_rating": false,
         "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 32,
+        "padding_top": 80,
         "padding_bottom": 40
       }
     },
@@ -528,6 +629,8 @@
     "17167094004719c4d6",
     "171670943825f88667",
     "videomob_LXeKwY",
+    "image_banner_QDi9Fm",
+    "section_image_text_hHNqXh",
     "featured_collection",
     "69b0eb11-da58-48b4-88ba-a029b4e963ef",
     "d6584272-c72f-4642-9bde-3bdc5484b6c1",
