@@ -1,0 +1,60 @@
+<div class="custom-v desk-v">
+  <video autoplay loop muted playsinline width="100%" {% if section.settings.height != 'use_image' %} style="top: 0;  left: 0;  width: 100%;  height: auto"{% endif %}>
+        <source src="{{ section.settings.videofile }}" type="video/mp4" id="{{ section.id }}">
+      </video> 
+  <div class="aa-hh">
+<div class="aa-11"><h1>{{ section.settings.headingcus }}</h1></div>
+  <div class="aa-11"><span>{{ section.settings.headingcus1 }}</span></div>
+              {% if section.settings.button-l != blank %}
+
+  <a href="{{ section.settings.button-l }}">
+  <div class="aa-11 btn"><span>{{ section.settings.headingcus11 }}</span></div>
+  </a>
+              {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "custom video",
+    "settings": [
+      {
+      "type": "text",
+      "id": "videofile",
+      "label": "Video URL",
+      "default": "https://cdn.shopify.com/s/files/1/2018/8867/files/ice.mp4"
+    },
+       {
+      "type": "text",
+      "id": "headingcus",
+      "label": "add heading"
+    },
+             {
+      "type": "text",
+      "id": "headingcus1",
+      "label": "add heading"
+    },
+                {
+      "type": "text",
+      "id": "headingcus11",
+      "label": "add button text"
+    },
+                {
+      "type": "url",
+      "id": "button-l",
+      "label": "add button link"
+    }
+    ],
+     "presets": [
+    {
+      "name": "banner custom video"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

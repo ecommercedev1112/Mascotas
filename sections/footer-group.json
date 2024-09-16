@@ -1,0 +1,134 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "1717160466cb75c5db": {
+      "type": "apps",
+      "blocks": {
+        "easy_content_builder_features_yUqHit": {
+          "type": "shopify:\/\/apps\/easy-content-builder\/blocks\/features\/08c79414-ca28-4781-a647-2921b7943a0b",
+          "settings": {
+            "img_position": "left",
+            "uk_text_align": "left",
+            "item_margin": "small",
+            "item_style": "",
+            "row_xs": 1,
+            "row_lg": 4,
+            "scrollspy": "fade",
+            "item1_title": "100% Organic",
+            "item1_body": "<p>Crafted with 100% organic cotton.<\/p>",
+            "item1_image": "shopify:\/\/shop_images\/plant-based_3638017.png",
+            "item2_title": "Biodegradable",
+            "item2_body": "<p>Our products are made by using biodegradable material.<\/p>",
+            "item2_image": "shopify:\/\/shop_images\/leaf_5487977.png",
+            "item3_title": "Toxin Free",
+            "item3_body": "<p>Made without fragrances<\/p>",
+            "item3_image": "shopify:\/\/shop_images\/prohibited-icon-512x512-cho7awoe.png",
+            "item4_title": "Hypoallergenic",
+            "item4_body": "<p>Comfortable, super soft and sutaible for all skin types.<\/p>",
+            "item4_image": "shopify:\/\/shop_images\/3637264.png",
+            "item5_title": "",
+            "item5_body": "",
+            "item6_title": "",
+            "item6_body": ""
+          }
+        },
+        "easy_content_builder_section_settings_QgDr6W": {
+          "type": "shopify:\/\/apps\/easy-content-builder\/blocks\/section-settings\/08c79414-ca28-4781-a647-2921b7943a0b",
+          "settings": {
+            "fullwidth": true,
+            "mw": "1300px",
+            "mw_mobile": "",
+            "layout": "one",
+            "layout_mobile": "one",
+            "column_main": 50,
+            "column_gap": 20,
+            "row_gap": 0,
+            "bg_color": "",
+            "bg_image_repeat": "no",
+            "bg_image_position": "top",
+            "bg_image_width": 100,
+            "bg_parallax": "",
+            "mask_color": "",
+            "mask_opacity": 0.5,
+            "container_bg_color": "#ced4d5",
+            "container_border_radius": 0,
+            "text_color": "",
+            "pt": "",
+            "pb": "",
+            "container_pt": "30px",
+            "container_pb": "30px"
+          }
+        }
+      },
+      "block_order": [
+        "easy_content_builder_features_yUqHit",
+        "easy_content_builder_section_settings_QgDr6W"
+      ],
+      "custom_css": [
+        ".ecb-grid > div > .shopify-block{padding:20px;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list_mVEKhE": {
+          "type": "link_list",
+          "settings": {
+            "heading": "COLLECTIONS",
+            "menu": "collections"
+          }
+        },
+        "0642a2c7-a623-4ea5-8a03-a880a353c36b": {
+          "type": "link_list",
+          "settings": {
+            "heading": "QUICK LINKS",
+            "menu": "new-menu"
+          }
+        },
+        "link_list_MEyNkN": {
+          "type": "link_list",
+          "settings": {
+            "heading": "SEASONS",
+            "menu": "season"
+          }
+        },
+        "ee31800c-2886-4a9c-a215-eb17a3655606": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ai-generated-labrador-retriever-dog-picture_23-2150644882.jpg",
+            "image_width": 550,
+            "alignment": ""
+          }
+        }
+      },
+      "block_order": [
+        "link_list_mVEKhE",
+        "0642a2c7-a623-4ea5-8a03-a880a353c36b",
+        "link_list_MEyNkN",
+        "ee31800c-2886-4a9c-a215-eb17a3655606"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 44,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "1717160466cb75c5db",
+    "footer"
+  ]
+}

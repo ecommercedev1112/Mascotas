@@ -1,0 +1,62 @@
+<div class="custom-v desk-m">
+  <video autoplay loop muted playsinline width="100%" {% if section.settings.height != 'use_image' %} style="top: 0;  left: 0;  width: 100%;  height: auto"{% endif %}>
+        <source src="{{ section.settings.videofile1 }}" type="video/mp4" id="{{ section.id }}">
+      </video> 
+
+   <div id="mobile-heading">
+<div id="mobile-title">{{ section.settings.headingcus }}</div>
+  <div class="mobile-d1"><span>{{ section.settings.headingcus1 }}</span></div>
+              {% if section.settings.button-l != blank %}
+
+  <a href="{{ section.settings.button-l }}">
+  <div class="aa-11 btn"><span>{{ section.settings.headingcus11 }}</span></div>
+  </a>
+              {% endif %}
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "mobile custom video",
+    "settings": [
+      {
+      "type": "text",
+      "id": "videofile1",
+      "label": "Video URL",
+      "default": "https://cdn.shopify.com/s/files/1/2018/8867/files/ice.mp4"
+    },
+       {
+      "type": "text",
+      "id": "headingcus",
+      "label": "add heading"
+    },
+             {
+      "type": "text",
+      "id": "headingcus1",
+      "label": "add heading"
+    },
+                {
+      "type": "text",
+      "id": "headingcus11",
+      "label": "add button text"
+    },
+                {
+      "type": "url",
+      "id": "button-l",
+      "label": "add button link"
+    }
+    ],
+     "presets": [
+    {
+      "name": "mobile custom video"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
