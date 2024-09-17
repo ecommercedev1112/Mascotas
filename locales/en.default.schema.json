@@ -3468,6 +3468,20 @@
       "presets": {
         "name": "Customer solution"
       }
+    },
+    "section-video": {
+      "name": "Video section",
+      "settings": {
+        "video_url": {
+          "label": "Video URL"
+        },
+        "cover_image": {
+          "label": "Cover Image"
+        }
+      },
+      "presets": {
+        "name": "Video section"
+      }
     }
   }
 }
