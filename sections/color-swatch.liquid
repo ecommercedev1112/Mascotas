@@ -1,0 +1,80 @@
+<style>
+    {% for block in section.blocks %}
+      {% assign color_name = block.settings.title %}
+      [data-color-name="{{ color_name }}"],
+      [data-color-name="{{ color_name }}"] > label {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin: 2px;
+        position: relative;
+        border-radius: 50%;
+        border: none !important;
+        background-color: {{ block.settings.color }} !important;
+        {% if block.settings.image != blank %}
+          background-image: url('{{ block.settings.image | img_url: '16px' }}') !important;
+        {% endif %}
+        cursor: pointer;
+        transition: all .5s cubic-bezier(.215,.61,.355,1);
+      }
+      [data-color-name="{{ color_name }}"]:checked + label::after {
+        border: 1px solid #000 !important;
+        display: inline-block;
+      }
+      [data-color-name="White"],
+      [data-color-name="White"] > label {
+        border: 1px solid #e2e2e2 !important;
+      }
+      .color-swatches__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 5px;
+        padding-bottom: 12px;
+      }
+      .color_alt_ {
+        display: none;
+      }
+      fieldset.product-form__input .form__label {
+        display: none;
+      }
+    {% endfor %}
+  </style>
+  
+  {% schema %}
+  {
+    "name": "Color swatch",
+    "class": "color-swatch",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "color",
+        "name": "Color",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Name"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "color",
+            "id": "color",
+            "label": "Color",
+            "default": "transparent"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Color swatch"
+      }
+    ]
+  }
+  {% endschema %}
+  

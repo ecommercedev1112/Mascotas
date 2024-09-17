@@ -201,10 +201,8 @@ footer.footer.color-background-2.gradient.section-sections--21791537299778__foot
 .footer-block__details-content li {
     text-transform: uppercase;
 }
-.product-form__input input[type=radio]+label {
-  
-    padding: 2rem 2rem !important;
-
+.product-form__input input[type=radio]+label {  
+    padding: 1.5rem 1.5rem !important;
 }
 @font-face {
     font-family: 'Cinzel-Medium';
@@ -273,4 +271,9 @@ section#shopify-section-template--21791536841026__57a92f28-a7c1-49b1-9bd3-dd8fca
 
   #shopify-section-template--21791536841026__2490cca3-5488-40f9-a604-472d6df31086 .aa-11{margin-top:30px !important;}
   
+}
+@media(max-width: 768px) {
+    .product-form__input input[type=radio]+label {  
+        padding: 1rem 1rem !important;
+    }
 }

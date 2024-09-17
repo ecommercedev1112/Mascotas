@@ -46,27 +46,51 @@
   -%}
 
   {%- if block.settings.picker_type == 'button' -%}
-    <input
-      type="radio"
-      id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-      name="{{ option.name }}"
-      value="{{ value | escape }}"
-      form="{{ product_form_id }}"
-      {% if option.selected_value == value %}
-        checked
-      {% endif %}
-      {% if option_disabled %}
-        class="disabled"
-      {% endif %}
-    >
-   {% if product.variants[forloop.index0].metafields.color.values and option.name == 'Color' %}
-  <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="background-color: {{product.variants[forloop.index0].metafields.color.values}}"> 
-  </label>
-{% else %}
-  <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-    {{ value }}
-  </label>
-{% endif %}
+    {% if option.name == 'Size' %}
+      <input
+        type="radio"
+        id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+        name="{{ option.name }}"
+        value="{{ value | escape }}"
+        form="{{ product_form_id }}"
+        {% if option.selected_value == value %}
+          checked
+        {% endif %}
+        {% if option_disabled %}
+          class="disabled"
+        {% endif %}
+      >
+      <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="size_ size_EnableStock_">
+        {{ value -}}
+        <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+      </label>
+    {% endif %}
+    {% if option.name == 'Color' %}
+      <input
+        type="radio"
+        id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+        name="{{ option.name }}"
+        value="{{ value | escape }}"
+        form="{{ product_form_id }}"
+        data-color-name="{{ value }}"
+        {% if option.selected_value == value %}
+          checked
+        {% endif %}
+        {% if option_disabled %}
+          class="disabled"
+        {% endif %}
+      >
+      <label
+        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+        class="color_ color_EnableStock_"
+        data-color-name="{{ value }}"
+      >
+      </label>
+      <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="color_alt_">
+        {{ value }}
+        <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+      </label>
+    {% endif %}
   {%- elsif block.settings.picker_type == 'dropdown' -%}
     <option
       value="{{ value | escape }}"

@@ -57,7 +57,7 @@
         </h2>
       {%- endif -%}
       {%- if section.settings.subtitle != blank -%}
-        <h4 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <h4 class="subtitle inline-richtext">
           {{ section.settings.subtitle }}
         </h4>
       {%- endif -%}
@@ -91,16 +91,22 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            {% render 'card-product',
-              card_product: product,
-              media_aspect_ratio: section.settings.image_ratio,
-              image_shape: section.settings.image_shape,
-              show_secondary_image: section.settings.show_secondary_image,
-              show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating,
-              show_quick_add: section.settings.enable_quick_add,
-              section_id: section.id
-            %}
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'variant_picker' -%}
+                {% render 'card-product',
+                  card_product: product,
+                  block: block,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  image_shape: section.settings.image_shape,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  show_quick_add: section.settings.enable_quick_add,
+                  section_id: section.id
+                %}
+              {%- endcase -%}
+            {%- endfor -%}
           </li>
         {%- else -%}
           {%- for i in (1..4) -%}
@@ -154,7 +160,6 @@
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <a
           href="{{ section.settings.collection.url }}"
-          class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
           aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
         >
           {{ 'sections.featured_collection.view_all' | t }}
@@ -184,7 +189,7 @@
     },
     {
       "type": "text",
-      "id": "subtile",
+      "id": "subtitle",
       "label": "t:sections.featured-collection.settings.subtitle.label",
       "default": "collection"
     },
@@ -371,7 +376,7 @@
       "default": "default",
       "label": "t:sections.all.image_shape.label",
       "info": "t:sections.all.image_shape.info"
-    },
+    },    
     {
       "type": "checkbox",
       "id": "show_secondary_image",
@@ -448,9 +453,38 @@
       "default": 36
     }
   ],
+  "blocks": [
+    {
+      "type": "variant_picker",
+      "name": "t:sections.featured-collection.blocks.variant_picker.name",
+      "settings": [
+        {
+          "type": "select",
+          "id": "picker_type",
+          "options": [
+            {
+              "value": "dropdown",
+              "label": "t:sections.featured-collection.blocks.variant_picker.settings.picker_type.options__1.label"
+            },
+            {
+              "value": "button",
+              "label": "t:sections.featured-collection.blocks.variant_picker.settings.picker_type.options__2.label"
+            }
+          ],
+          "default": "button",
+          "label": "t:sections.featured-collection.blocks.variant_picker.settings.picker_type.label"
+        }
+      ]
+    }
+  ],  
   "presets": [
     {
-      "name": "t:sections.featured-collection.presets.name"
+      "name": "t:sections.featured-collection.presets.name",
+      "blocks": [
+        {
+          "type": "variant_picker"
+        }
+      ]
     }
   ]
 }

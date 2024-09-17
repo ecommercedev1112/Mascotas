@@ -146,7 +146,7 @@
 }
 
 .card__information {
-  grid-row-start: 2;
+  grid-row-start: 1;
   padding: 1.3rem 1rem;
 }
 
@@ -162,7 +162,7 @@
 
 @media screen and (min-width: 750px) {
   .card__information {
-    padding-bottom: 1.7rem;
+    padding-bottom: 0;
     padding-top: 1.7rem;
   }
 }
@@ -276,6 +276,14 @@
   box-shadow: none;
   outline: 0;
 }
+.card__heading a {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 130%;
+  padding-bottom: 16px;
+  font-family: var(--font-heading-family);
+}
 
 @media screen and (min-width: 990px) {
   .card .media.media--hover-effect > img:only-child,
@@ -385,7 +393,7 @@
 }
 
 .card-information > *:not(.visually-hidden:first-child) + *:not(.rating):not(.card__information-volume-pricing-note) {
-  margin-top: 0.7rem;
+  margin-top: 0;
 }
 
 .card-information .caption {
@@ -481,5 +489,30 @@
 
   .grid__item:nth-child(8n) .product-card-wrapper:hover .shape--blob {
     clip-path: polygon(var(--shape--blob-5));
+  }
+}
+
+.card-information .price__regular .price-item--regular {
+  font-size: 18px;
+  line-height: 150%;
+}
+.card__media .media {
+  border: 1px solid #232526;
+}
+.card__information .product-form__input {
+  margin-bottom: 0;
+}
+.card__information  .color-swatches__wrapper {
+  padding-bottom: 0;
+}
+@media(max-width: 768px) {
+  .card__heading a {
+    font-size: 18px;
+  }
+  .card-information .price__regular .price-item--regular {
+    font-size: 15px;
+  }
+  .card__information {
+    padding-bottom: 0;
   }
 }

@@ -22,6 +22,8 @@
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
@@ -141,7 +143,7 @@
       <div class="card__content">
         <div class="card__information">
           <h3
-            class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
+            class="b card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
               id="title-{{ section_id }}-{{ card_product.id }}"
             {% endif %}
@@ -200,11 +202,15 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+
             {%- if card_product.quantity_price_breaks_configured? -%}
               <div class="card__information-volume-pricing-note">
                 <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
               </div>
             {%- endif -%}
+          </div>
+          <div class="variant-color-swatch">
+            {% render 'product-variant-picker', product: card_product, block: block, product_form_id: product_form_id %}
           </div>
         </div>
         {%- if show_quick_add -%}
@@ -320,7 +326,7 @@
               {{- 'products.product.on_sale' | t -}}
             </span>
           {%- endif -%}
-        </div>
+        </div>        
       </div>
     </div>
   </div>

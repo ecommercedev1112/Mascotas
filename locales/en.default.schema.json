@@ -783,7 +783,7 @@
           "options__3": {
             "label": "Square"
           }
-        },
+        },        
         "show_secondary_image": {
           "label": "Show second image on hover"
         },
@@ -812,6 +812,22 @@
         },
         "swipe_on_mobile": {
           "label": "Enable swipe on mobile"
+        }
+      },
+      "blocks":{
+        "variant_picker": {
+          "name": "Variant picker",
+          "settings": {
+            "picker_type": {
+              "label": "Type",
+              "options__1": {
+                "label": "Dropdown"
+              },
+              "options__2": {
+                "label": "Pills"
+              }
+            }
+          }
         }
       },
       "presets": {
