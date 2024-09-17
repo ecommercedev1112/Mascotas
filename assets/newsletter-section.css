@@ -48,3 +48,31 @@
     margin: 0 0 0 1rem;
   }
 }
+.newsletter__wrapper h2 {
+  max-width: 60%;
+  margin: auto;
+  font-weight: 400;
+  color: #1F1F1F;
+}
+.newsletter__subheading {
+  padding-bottom: 2rem;
+}
+.newsletter__subheading p {
+  font-size: 22px;
+  font-family: var(--font-heading-family);
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #000;
+}
+.newsletter-form__field-wrapper .field__label {
+  text-transform: uppercase;
+}
+@media(max-width: 768px) {
+  .newsletter__wrapper h2 {
+    max-width: 100%;
+  }
+  .newsletter__subheading p {
+    font-size: 18px;
+  }
+}
