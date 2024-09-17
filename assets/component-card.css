@@ -508,6 +508,7 @@
 @media(max-width: 768px) {
   .card__heading a {
     font-size: 18px;
+    min-height: 48px;
   }
   .card-information .price__regular .price-item--regular {
     font-size: 15px;

@@ -315,13 +315,14 @@ h1,
 
 h2,
 .h2 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
+  font-size: calc(var(--font-heading-scale) * 3.8rem) !important;
+  line-height: 130% !important;
 }
 
-@media only screen and (min-width: 750px) {
+@media (max-width: 768px) {
   h2,
   .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    font-size: calc(var(--font-heading-scale) * 2.8rem) !important;
   }
 }
 

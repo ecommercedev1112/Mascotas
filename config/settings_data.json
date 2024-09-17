@@ -132,6 +132,95 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "color-swatch": {
+        "type": "color-swatch",
+        "blocks": {
+          "color_BBNwnK": {
+            "type": "color",
+            "settings": {
+              "title": "Pink",
+              "color": "#fdced6"
+            }
+          },
+          "color_bnF8A9": {
+            "type": "color",
+            "settings": {
+              "title": "Black",
+              "color": "#000000"
+            }
+          },
+          "color_dAUCDi": {
+            "type": "color",
+            "settings": {
+              "title": "Lilac",
+              "color": "#fdeaee"
+            }
+          },
+          "color_dqqHrR": {
+            "type": "color",
+            "settings": {
+              "title": "Jean",
+              "color": "#497ca2"
+            }
+          },
+          "color_H4nAkh": {
+            "type": "color",
+            "settings": {
+              "title": "Yellow",
+              "color": "#f6e78a"
+            }
+          },
+          "color_79gyLb": {
+            "type": "color",
+            "settings": {
+              "title": "Beige",
+              "color": "#dbeefc"
+            }
+          },
+          "color_jtiGfr": {
+            "type": "color",
+            "settings": {
+              "title": "Light Blue",
+              "color": "#afdbfc"
+            }
+          },
+          "color_ic6PQw": {
+            "type": "color",
+            "settings": {
+              "title": "Ivory",
+              "color": "#e3f0fa"
+            }
+          },
+          "color_KPEpEU": {
+            "type": "color",
+            "settings": {
+              "title": "White",
+              "color": "#ffffff"
+            }
+          },
+          "color_fGGCEG": {
+            "type": "color",
+            "settings": {
+              "title": "Blue",
+              "color": "#0e6fdf"
+            }
+          }
+        },
+        "block_order": [
+          "color_BBNwnK",
+          "color_bnF8A9",
+          "color_dAUCDi",
+          "color_dqqHrR",
+          "color_H4nAkh",
+          "color_79gyLb",
+          "color_jtiGfr",
+          "color_ic6PQw",
+          "color_KPEpEU",
+          "color_fGGCEG"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [

@@ -265,8 +265,20 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "blocks": {
+        "variant_picker_4VBjHC": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        }
+      },
+      "block_order": [
+        "variant_picker_4VBjHC"
+      ],
       "settings": {
         "title": "The Woof Walk Wardrobe",
+        "subtitle": "collection",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -279,7 +291,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -289,6 +301,37 @@
         "swipe_on_mobile": true,
         "padding_top": 80,
         "padding_bottom": 40
+      }
+    },
+    "section_text_image_Y9gPjP": {
+      "type": "section-text-image",
+      "blocks": {
+        "text_p3pzVL": {
+          "type": "text",
+          "settings": {
+            "common_text_up": "Mascotas elevates everyday dog wear with exquisitely crafted garments, prioritizing comfort and canine couture.We use only the finest, pet-safe materials – think",
+            "italic_text": "100% organic Peruvian Pima cotton, luxurious cashmere, and breathable linens -",
+            "common_text_back": "to ensure your furry friend feels as fabulous as they look."
+          }
+        },
+        "text_3tABQ6": {
+          "type": "text",
+          "settings": {
+            "common_text_up": "However, Mascotas isn't just about aesthetics.",
+            "italic_text": "Our meticulous design ensures a perfect fit, allowing unrestricted movement and joyful exploration.",
+            "common_text_back": "Whether a cozy cable-knit sweater for chilly days or a pawsome poolside bandana, every piece is thoughtfully made to complement your dog's unique personality."
+          }
+        }
+      },
+      "block_order": [
+        "text_p3pzVL",
+        "text_3tABQ6"
+      ],
+      "settings": {
+        "title": "Our story",
+        "image": "shopify:\/\/shop_images\/dog_short.gif",
+        "padding_top": 75,
+        "padding_bottom": 100
       }
     },
     "69b0eb11-da58-48b4-88ba-a029b4e963ef": {
@@ -632,6 +675,7 @@
     "image_banner_QDi9Fm",
     "section_image_text_hHNqXh",
     "featured_collection",
+    "section_text_image_Y9gPjP",
     "69b0eb11-da58-48b4-88ba-a029b4e963ef",
     "d6584272-c72f-4642-9bde-3bdc5484b6c1",
     "26262d83-8aa1-4cc7-85e4-f971010aa912",

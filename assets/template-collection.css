@@ -71,7 +71,7 @@
 }
 .collection__title.title-wrapper {
   padding-bottom: 5.6rem;
-  margin: 0;
+  margin: 0 auto;
 }
 @media screen and (min-width: 990px) {
   .collection__title--desktop-slider .title {
@@ -92,7 +92,6 @@
   margin-top: 1rem;
 }
 .collection__title .title {
-  font-size: 38px;
   font-weight: 400;
   line-height: 150%;
   margin-bottom: 12px;
@@ -114,6 +113,12 @@
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
+}
+.collection slider-component ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: unset;
 }
 @media(max-width: 768px) {
   .collection__title .title {
@@ -137,5 +142,8 @@
   }
   .collection .slider-mobile-gutter .slider-buttons {
     display: none;
+  }
+  .collection slider-component ul {
+    gap: 12px;
   }
 }

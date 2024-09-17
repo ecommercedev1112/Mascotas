@@ -1,22 +1,22 @@
 {% style %}
-  .section-text-image__wrapper {
+  .section-image-collection__wrapper {
       padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
   }
   @media screen and (min-width: 1025px) {
-      .section-text-image__wrapper {
+      .section-image-collection__wrapper {
           padding-top: {{ section.settings.padding_top }}px;
           padding-bottom: {{ section.settings.padding_bottom }}px;
       }
   }
 {% endstyle %}
 
-{{ 'section-text-image.css' | asset_url | stylesheet_tag }}
+{{ 'section-image-collection.css' | asset_url | stylesheet_tag }}
 
-<div class="section-text-image__wrapper">
-    <div class="section-text-image">
-        <div class="section-text-image__image__wrapper">
-            <div class="section-text-image__image">
+<div class="section-image-collection__wrapper">
+    <div class="section-image-collection">
+        <div class="section-image-collection__image__wrapper">
+            <div class="section-image-collection__image">
                 {% if section.settings.image != blank %}
                     <img
                     src="{{ section.settings.image | img_url: "master" }}"
@@ -28,8 +28,8 @@
             </div>
         </div>
     </div>        
-    <div class="section-text-image__body">
-        <div class="section-text-image__content">
+    <div class="section-image-collection__body">
+        <div class="section-image-collection__content">
             {% if section.settings.title != blank %}
                 <h2 class="section-title">{{ section.settings.title }}</h2>
             {% endif %}
@@ -49,18 +49,18 @@
 
 {% schema %}
 {
-  "name": "t:sections.section-text-image.name",
+  "name": "t:sections.section-image-collection.name",
   "settings": [
     {
         "type": "text",
         "id": "title",
-        "label": "t:sections.section-text-image.settings.title.label",
+        "label": "t:sections.section-image-collection.settings.title.label",
         "default": "Our story"
     },
     {
         "type": "image_picker",
         "id": "image",
-        "label": "t:sections.section-text-image.settings.image.label"
+        "label": "t:sections.section-image-collection.settings.image.label"
     },
     {
       "type": "range",
@@ -86,29 +86,29 @@
   "blocks": [
     {
         "type": "text",
-        "name": "t:sections.section-text-image.blocks.text.name",
+        "name": "t:sections.section-image-collection.blocks.text.name",
         "settings": [
             {
                 "type": "text",
                 "id": "common_text_up",
-                "label": "t:sections.section-text-image.blocks.text.settings.common_text_up.label",
+                "label": "t:sections.section-image-collection.blocks.text.settings.common_text_up.label",
             },
             {
                 "type": "text",
                 "id": "italic_text",
-                "label": "t:sections.section-text-image.blocks.text.settings.italic_text.label",
+                "label": "t:sections.section-image-collection.blocks.text.settings.italic_text.label",
             },
             {
                 "type": "text",
                 "id": "common_text_back",
-                "label": "t:sections.section-text-image.blocks.text.settings.common_text_back.label",
+                "label": "t:sections.section-image-collection.blocks.text.settings.common_text_back.label",
             }
         ]
     }
   ],  
   "presets": [
     {
-      "name": "t:sections.section-text-image.presets.name",
+      "name": "t:sections.section-image-collection.presets.name",
       "blocks": [
         {
             "type": "text"            

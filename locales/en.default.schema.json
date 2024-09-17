@@ -783,7 +783,7 @@
           "options__3": {
             "label": "Square"
           }
-        },        
+        },
         "show_secondary_image": {
           "label": "Show second image on hover"
         },
@@ -814,7 +814,7 @@
           "label": "Enable swipe on mobile"
         }
       },
-      "blocks":{
+      "blocks": {
         "variant_picker": {
           "name": "Variant picker",
           "settings": {
@@ -3378,6 +3378,39 @@
       },
       "presets": {
         "name": "Multi image text column"
+      }
+    },
+    "section-text-image": {
+      "name": "Image text section",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "image": {
+          "label": "Image"
+        },
+        "content": {
+          "label": "Text"
+        }
+      },
+      "blocks": {
+        "text": {
+          "name": "Text",
+          "settings": {
+            "common_text_up": {
+              "label": "Common Text Former"
+            },
+            "italic_text": {
+              "label": "Italic Text"
+            },
+            "common_text_back": {
+              "label": "Common Text later"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Image text section"
       }
     }
   }
