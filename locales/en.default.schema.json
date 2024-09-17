@@ -3412,6 +3412,23 @@
       "presets": {
         "name": "Image text section"
       }
+    },
+    "section-image-collection": {
+      "name": "Image collection section",
+      "settings": {
+        "image": {
+          "label": "Image"
+        },
+        "collection": {
+          "label": "Collection"
+        },
+        "title": {
+          "label": "Title"
+        }
+      },
+      "presets": {
+        "name": "Image collection section"
+      }
     }
   }
 }

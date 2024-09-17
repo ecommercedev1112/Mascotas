@@ -1,0 +1,83 @@
+.section-image-collection__wrapper.page-width {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.section-image-collection__image {
+    width: 41%;
+}
+.section-image-collection__body {
+    width: 55%;
+}
+.section-image-collection__content .section-title {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 32px;
+    text-align: center;
+}
+.section-content__wrapper .swiper-button-prev,
+.section-content__wrapper .swiper-button-next {
+    background-image: unset;
+    top: 40%;
+}
+.section-image-collection__content {
+    width: 70%;
+    margin: auto;
+}
+.section-content__product {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; 
+}
+.section-content__product .product__img a {
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 0.92;
+}
+.section-content__product .product__img img {
+    width: 334px;
+    height: 366px;
+}
+.section-content__product .product__info {
+    text-align: center;
+}
+.section-content__product .product__info a {
+    font-family: var(--font-heading-family);
+    font-size: 22px;
+    line-height: 130%;
+    padding-bottom: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+@media(max-width: 768px) {
+    .section-image-collection__wrapper.page-width {
+        flex-direction: column;
+        gap: 32px;
+    }
+    .section-image-collection__image,
+    .section-image-collection__body,
+    .section-image-collection__content {
+        width: 100%;
+    }
+    .section-image-collection__content .section-title {
+        padding-bottom: 24px;
+    }
+    .section-content__product .product__img a {
+        aspect-ratio: 1.2;
+    }
+    .section-content__product .product__img img {
+        width: 80%;
+        height: auto;
+    }
+    .section-content__product .product__info a {
+        font-size: 18px;
+    }
+    .section-content__product .product__info span {
+        font-size: 15px;
+    }
+}

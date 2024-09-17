@@ -334,6 +334,16 @@
         "padding_bottom": 100
       }
     },
+    "section_image_collection_FyEgLT": {
+      "type": "section-image-collection",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_8.png",
+        "collection": "winter",
+        "title": "Trending now",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "69b0eb11-da58-48b4-88ba-a029b4e963ef": {
       "type": "multicolumn",
       "blocks": {
@@ -676,6 +686,7 @@
     "section_image_text_hHNqXh",
     "featured_collection",
     "section_text_image_Y9gPjP",
+    "section_image_collection_FyEgLT",
     "69b0eb11-da58-48b4-88ba-a029b4e963ef",
     "d6584272-c72f-4642-9bde-3bdc5484b6c1",
     "26262d83-8aa1-4cc7-85e4-f971010aa912",

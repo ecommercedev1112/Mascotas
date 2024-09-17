@@ -77,4 +77,8 @@
         margin: 40px 0;
         width: 100%;
     }
+    .section-content__wrapper .section-content .italic-text {
+        font-size: 18px;
+    }
+
 }
