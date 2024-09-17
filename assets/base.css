@@ -342,7 +342,15 @@ h4,
 .h4 {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  font-size: calc(var(--font-heading-scale) * 2.2rem) !important;
+  line-height: 130% !important;
+}
+
+@media(max-width: 768px) {
+    h4,
+  .h4 {
+    font-size: calc(var(--font-heading-scale) * 1.8rem) !important;
+  }
 }
 
 h5,

@@ -1,0 +1,163 @@
+{% style %}
+  .section-customer-solution__wrapper {
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media screen and (min-width: 1025px) {
+      .section-customer-solution__wrapper {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+  }
+{% endstyle %}
+
+{{ 'section-customer-solution.css' | asset_url | stylesheet_tag }}
+
+<div class="section-customer-solution__wrapper page-width">
+    {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="section-customer-solution__body">
+        <div class="section-customer-solution__info">
+            <div class="section-customer__info">
+                <div class="section-customer__image">
+                    {% if section.settings.image != blank %}
+                        <img
+                        src="{{ section.settings.image | img_url: "master" }}"
+                        alt="image"
+                        width="{{ section.settings.image.width }}"
+                        height="{{ section.settings.image.height }}"
+                        >                        
+                    {% endif %}
+                </div>
+                <div class="section-customer__detail">
+                    {% if section.settings.customer_name != blank %}
+                        <h4>{{ section.settings.customer_name }}</h4>    
+                    {% endif %}
+                    {% if section.settings.customer_detail != blank %}
+                        {{ section.settings.customer_detail }}                    
+                    {% endif %}
+                </div>
+            </div>
+            <div class="section-customer__description">
+                {% if section.settings.description != blank %}
+                    {{ section.settings.description }}                    
+                {% endif %}
+            </div>
+        </div>        
+    
+        <div class="section-customer-solution__content">
+            {% for block in section.blocks %}
+                <div class="section-content">
+                    <div class="check-icon__wrapper">
+                        {% render 'icon-ticket' %}
+                    </div>
+                    <div class="content__wrapper">
+                        <h4>{{ block.settings.title }}</h4>
+                        <span>{{ block.settings.text }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="section-customer-solution__logo-image">
+        {% if section.settings.logo_image != blank %}
+            <img src="{{ section.settings.logo_image | img_url: "master"}}" alt="logo-image" width="{{ section.settings.logo_image.width }}" height="{{ section.settings.logo_image.height }}">
+        {% endif %}
+    </div>
+  </div>
+
+
+{% schema %}
+{
+  "name": "t:sections.section-customer-solution.name",
+  "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.section-customer-solution.settings.title.label",
+        "default": "Your worries, our solution"
+    },
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:sections.section-customer-solution.settings.image.label"
+    },
+    {
+        "type": "text",
+        "id": "customer_name",
+        "label": "t:sections.section-customer-solution.settings.customer_name.label",
+        "default": "Monica Michaelson",
+    },
+    {
+        "type": "richtext",
+        "id": "customer_detail",
+        "label": "t:sections.section-customer-solution.settings.customer_detail.label"
+    },
+    {
+        "type": "richtext",
+        "id": "description",
+        "label": "t:sections.section-customer-solution.settings.description.label"
+    },
+    {
+        "type": "image_picker",
+        "id": "logo_image",
+        "label": "t:sections.section-customer-solution.settings.logo_image.label"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 120
+    }
+  ],
+  "blocks": [
+    {
+        "type": "text",
+        "name": "t:sections.section-customer-solution.blocks.text.name",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "t:sections.section-customer-solution.blocks.text.settings.title.label"
+            },
+            {
+                "type": "text",
+                "id": "text",
+                "label": "t:sections.section-customer-solution.blocks.text.settings.text.label"
+            }            
+        ]
+    }
+  ],  
+  "presets": [
+    {
+      "name": "t:sections.section-customer-solution.presets.name",
+      "blocks": [
+        {
+            "type": "text"            
+        },
+        {
+            "type": "text"
+        },
+        {
+            "type": "text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

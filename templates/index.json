@@ -340,8 +340,65 @@
         "image": "shopify:\/\/shop_images\/Rectangle_8.png",
         "collection": "winter",
         "title": "Trending now",
-        "padding_top": 60,
+        "padding_top": 0,
         "padding_bottom": 60
+      }
+    },
+    "section_customer_solution_GkTqwh": {
+      "type": "section-customer-solution",
+      "blocks": {
+        "text_8qAXRW": {
+          "type": "text",
+          "settings": {
+            "title": "More Than Just Clothing:",
+            "text": "Our pet apparel is a reflection of your unique fashion sense."
+          }
+        },
+        "text_fqtcJV": {
+          "type": "text",
+          "settings": {
+            "title": "Luxurious Materials:",
+            "text": "We use high-quality Pima cotton to ensure our garments are soft and comfortable for your furry companion."
+          }
+        },
+        "text_P9Lpx9": {
+          "type": "text",
+          "settings": {
+            "title": "Variety of Products:",
+            "text": "Choose from a selection of sleek coats and adorable sweaters, each designed to suit your pet’s style."
+          }
+        },
+        "text_JbWfBf": {
+          "type": "text",
+          "settings": {
+            "title": "High Standards:",
+            "text": "We maintain the highest standards of quality and style in every piece we create."
+          }
+        },
+        "text_hggyYk": {
+          "type": "text",
+          "settings": {
+            "title": "Fashion Experience:",
+            "text": "With us, you’re not just buying clothes; you’re investing in a fashion experience that deepens the bond between you and your pet."
+          }
+        }
+      },
+      "block_order": [
+        "text_8qAXRW",
+        "text_fqtcJV",
+        "text_P9Lpx9",
+        "text_JbWfBf",
+        "text_hggyYk"
+      ],
+      "settings": {
+        "title": "Your worries, our solution",
+        "image": "shopify:\/\/shop_images\/Ellipse_1.png",
+        "customer_name": "Monica Michaelson",
+        "customer_detail": "<p>28-year-old marketing manager at a fashion company in the United States<\/p>",
+        "description": "<p>My little Milo isn't just a pet; he's family. Ensuring his happiness and well-being is a top priority for me. I'll go above and beyond to make sure he's pampered and loved just like any other family member.<\/p>",
+        "logo_image": "shopify:\/\/shop_images\/image_1.png",
+        "padding_top": 80,
+        "padding_bottom": 40
       }
     },
     "69b0eb11-da58-48b4-88ba-a029b4e963ef": {
@@ -687,6 +744,7 @@
     "featured_collection",
     "section_text_image_Y9gPjP",
     "section_image_collection_FyEgLT",
+    "section_customer_solution_GkTqwh",
     "69b0eb11-da58-48b4-88ba-a029b4e963ef",
     "d6584272-c72f-4642-9bde-3bdc5484b6c1",
     "26262d83-8aa1-4cc7-85e4-f971010aa912",

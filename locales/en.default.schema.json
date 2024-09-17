@@ -3424,10 +3424,49 @@
         },
         "title": {
           "label": "Title"
+        },
+        "logo_image": {
+          "label": "Logo Image"
         }
       },
       "presets": {
         "name": "Image collection section"
+      }
+    },
+    "section-customer-solution": {
+      "name": "Customer solution section",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "image": {
+          "label": "Image"
+        },
+        "customer_name": {
+          "label": "Customer Name"
+        },
+        "customer_detail": {
+          "label": "Customer Detail"
+        },
+        "description": {
+          "label": "Description"
+        }
+      },
+      "blocks": {
+        "text": {
+          "name": "Text",
+          "settings": {
+            "title": {
+              "label": "Title"
+            },
+            "text": {
+              "label": "Text"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Customer solution"
       }
     }
   }
