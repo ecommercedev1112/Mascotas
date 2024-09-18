@@ -8,25 +8,16 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to Mascotas",
-            "link": ""
-          }
-        },
-        "announcement_nUwTAN": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
+            "text": "Get free shipping on order over $100. Duties and taxes for all products included.",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "announcement_nUwTAN"
+        "announcement-bar-0"
       ],
-      "disabled": true,
       "settings": {
-        "color_scheme": "accent-1",
+        "color_scheme": "scheme-51abd208-5617-41d4-9a32-2251b38c5f8e",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": true,

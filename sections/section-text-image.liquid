@@ -15,19 +15,21 @@
 <div class="section-text-image page-width">
     <div class="section-text-image__wrapper">
         <div class="section-text-image__image__wrapper">
-            <div class="section-text-image__image">
-                {% if section.settings.image != blank %}
-                    <img
-                    src="{{ section.settings.image | img_url: "master" }}"
-                    alt="image"
-                    width="{{ section.settings.image.width }}"
-                    height="{{ section.settings.image.height }}"
-                    >                        
-                {% endif %}
+            <div class="section-text-image__container">
+                <div class="section-text-image__image">
+                    {% if section.settings.image != blank %}
+                        <img
+                        src="{{ section.settings.image | img_url: "master" }}"
+                        alt="image"
+                        width="{{ section.settings.image.width }}"
+                        height="{{ section.settings.image.height }}"
+                        >                        
+                    {% endif %}
+                    <div class="section-text-image">
+                    </div>        
+                </div>
             </div>
         </div>
-        <div class="section-text-image">
-        </div>        
         <div class="section-text-image__body">
             <div class="section-text-image__content">
                 {% if section.settings.title != blank %}

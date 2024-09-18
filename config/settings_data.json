@@ -1,7 +1,7 @@
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/LOGO_WITHOUT_ICON_523792a7-610f-4311-8e53-20cb69daa478.png",
-    "logo_width": 210,
+    "logo_width": 340,
     "favicon": "shopify:\/\/shop_images\/MAIN_LOGO.png",
     "type_header_font": "cormorant_n3",
     "heading_scale": 100,
@@ -312,6 +312,17 @@
           "button": "#ffffff",
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-51abd208-5617-41d4-9a32-2251b38c5f8e": {
+        "settings": {
+          "background": "#e7eef4",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
       }

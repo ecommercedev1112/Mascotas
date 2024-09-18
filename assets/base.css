@@ -2321,6 +2321,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
 }
 .announcement-bar__message span {
   font-weight: 400;
+  font-size: 16px;
 }
 @keyframes translateAnnouncementSlideIn {
   0% {
