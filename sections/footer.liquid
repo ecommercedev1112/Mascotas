@@ -75,7 +75,7 @@
                 {% endif %}
               >
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                  <h4 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h4>
                 {%- endif -%}
 
                 {%- case block.type -%}
@@ -237,7 +237,11 @@
               {% # theme-check-enable %}
             </div>
           {%- endif -%}
-
+          <div class="footer-logo">
+            {% if section.settings.show_logo %}
+              <img src="{{ settings.logo | img_url: "medium"}}" width="{{ settings.logo.width }}" height="{{ settings.logo.height }}" alt="logo media">
+            {% endif %}
+          </div>
           {%- if section.settings.show_social and has_social_icons -%}
             {%- render 'social-icons', class: 'footer__list-social' -%}
           {%- endif -%}
@@ -351,9 +355,9 @@
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+          >&copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: routes.root_url -}}
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
+        <small class="copyright__content" style="display: none">{{ powered_by_link }}</small>
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
@@ -409,7 +413,7 @@
         {
           "type": "header",
           "content": "t:sections.footer.blocks.brand_information.settings.header__1.content"
-        },
+        },        
         {
           "type": "checkbox",
           "id": "show_social",
@@ -518,6 +522,13 @@
       "type": "header",
       "content": "t:sections.footer.settings.header__2.content",
       "info": "t:sections.footer.settings.header__2.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_logo",
+      "default": true,
+      "label": "t:sections.footer.settings.show_logo.label"
+      
     },
     {
       "type": "checkbox",

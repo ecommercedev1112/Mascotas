@@ -26,7 +26,7 @@ a.button.button--primary {
     DISPLAY: NONE;
 }
 .footer__content-bottom.scroll-trigger.animate--slide-in {
-    padding-top: 15px;
+    padding-top: 6rem;
 }
 div#shopify-section-template--21791536841026__4c2aaa8c-6ab0-45ec-bdb5-88b013550228 .custom-v {
     margin-top: 0px;
@@ -200,6 +200,8 @@ footer.footer.color-background-2.gradient.section-sections--21791537299778__foot
 }
 .footer-block__details-content li {
     text-transform: uppercase;
+    line-height: 1;
+    width: max-content;
 }
 .product-form__input input[type=radio]+label {  
     padding: 1.5rem 1.5rem !important;
@@ -215,9 +217,6 @@ footer.footer.color-background-2.gradient.section-sections--21791537299778__foot
 @font-face {
     font-family: 'Cinzel-Regular';
     src: url({{"Cinzel-Regular" | asset_url}}) format('woff2'),
-}
-.footer__copyright.caption {
-    display: none;
 }
 .product-popup-modal__content-info h1.h2 {
     display: none;

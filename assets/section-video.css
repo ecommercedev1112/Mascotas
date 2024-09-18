@@ -23,6 +23,6 @@
 }
 @media(max-width: 768px) {
     .section-video__wrapper {
-        aspect-ratio: unset;
+        aspect-ratio: 1;
     }
 }
