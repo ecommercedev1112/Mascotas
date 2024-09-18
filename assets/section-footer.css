@@ -334,6 +334,11 @@
     margin-right: 7.5rem;
   }
 }
+@media(min-width: 1500px) {
+  .footer-block__details-content > li:not(:last-child) {
+    margin-right: 14.5rem;
+  }
+}
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
   color: rgba(var(--color-foreground), 0.75);
