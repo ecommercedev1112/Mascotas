@@ -7,6 +7,7 @@
       "blocks": {
         "easy_content_builder_features_yUqHit": {
           "type": "shopify:\/\/apps\/easy-content-builder\/blocks\/features\/08c79414-ca28-4781-a647-2921b7943a0b",
+          "disabled": true,
           "settings": {
             "img_position": "left",
             "uk_text_align": "left",
@@ -49,7 +50,9 @@
             "container_bg_color": "#ced4d5",
             "text_color": "",
             "container_border_radius": 0,
+            "container_padding": "",
             "bg_color": "",
+            "bg_image_size": "cover",
             "bg_image_repeat": "no",
             "bg_image_position": "top",
             "bg_image_width": 100,
@@ -64,7 +67,7 @@
         "easy_content_builder_section_settings_QgDr6W"
       ],
       "custom_css": [
-        ".ecb-grid > div > .shopify-block{padding:20px;}"
+        ".ecb-grid > div > .shopify-block {padding: 20px;}"
       ],
       "settings": {
         "include_margins": true
@@ -80,48 +83,32 @@
             "menu": "collections"
           }
         },
-        "0642a2c7-a623-4ea5-8a03-a880a353c36b": {
-          "type": "link_list",
-          "settings": {
-            "heading": "QUICK LINKS",
-            "menu": "new-menu"
-          }
-        },
         "link_list_MEyNkN": {
           "type": "link_list",
           "settings": {
-            "heading": "SEASONS",
+            "heading": "shop",
             "menu": "season"
-          }
-        },
-        "ee31800c-2886-4a9c-a215-eb17a3655606": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ai-generated-labrador-retriever-dog-picture_23-2150644882.jpg",
-            "image_width": 550,
-            "alignment": ""
           }
         }
       },
       "block_order": [
         "link_list_mVEKhE",
-        "0642a2c7-a623-4ea5-8a03-a880a353c36b",
-        "link_list_MEyNkN",
-        "ee31800c-2886-4a9c-a215-eb17a3655606"
+        "link_list_MEyNkN"
       ],
       "settings": {
         "color_scheme": "background-2",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
+        "show_logo": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": true,
         "payment_enable": true,
         "show_policy": false,
         "margin_top": 0,
-        "padding_top": 44,
-        "padding_bottom": 28
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     }
   },

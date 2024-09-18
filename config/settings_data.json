@@ -505,7 +505,7 @@
     "custom_css": [
       "input#your-name {border: 4px solid black;}",
       "h1,.h1 {text-transform: uppercase;}",
-      ".banner--desktop-transparent .banner__box {background-color: white;}",
+      ".banner--desktop-transparent .banner__box {background-color: transparent;}",
       "@media screen and (max-width: 749px) {.banner:not(.banner--mobile-bottom):not(.email-signup-banner) .banner__box {background: #f3f0f0c9; margin: 40px; } h1, .h1 {font-size: 20px; }}",
       ".blockeasy_content_builder_section_settings_9iiFe4 {padding-top: ; padding-bottom: 0;}",
       ".uk-slider-container-offset {margin: 0px;}",
