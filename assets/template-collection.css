@@ -93,13 +93,14 @@
 }
 .collection__title .title {
   font-weight: 400;
-  line-height: 150%;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
+  margin: 0;
 }
 .collection__title .subtitle {
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
+  color: #000;
 }
 .collection__view-all {
   padding-top: 56px;
@@ -119,9 +120,6 @@
   flex-wrap: unset;
 }
 @media(max-width: 768px) {
-  .collection__title .title {
-    font-size: 28px;
-  }
   .collection__title .subtitle {
     font-size: 18px;
   }

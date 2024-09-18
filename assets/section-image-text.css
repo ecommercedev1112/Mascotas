@@ -46,7 +46,7 @@
 }
 .section-image-text__content .section-button a {
     text-decoration: none;
-    color: #232526;
+    color: #000;
     border: 1px solid #232526;
     padding: 4px 54px;
     text-transform: uppercase;
@@ -58,6 +58,7 @@
     font-size: 16px;
     line-height: 150%;
     margin: 0;
+    color: #232526;
 }
 @media(max-width: 768px) {
     .section-image-text__body {

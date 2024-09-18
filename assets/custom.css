@@ -9,7 +9,7 @@
 } */
 .header__menu-item span {
     font-size: 18px;
-    color: #232526;
+    color: #000;
     font-family: var(--font-body-family);
     text-transform: uppercase;
     font-weight: 400;

@@ -53,6 +53,7 @@
     padding-bottom: 12px;
     font-weight: 700;
     text-transform: uppercase;
+    color: #000;
 }
 @media(max-width: 768px) {
     .section-image-collection__wrapper.page-width {

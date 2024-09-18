@@ -1,3 +1,7 @@
+.section-text-imag.page-width {
+    padding-left: 0;
+    padding-right: 0;
+}
 .section-text-image__wrapper {
     width: 77%;
     margin: auto;
@@ -51,14 +55,14 @@
 .section-content__wrapper .section-content .italic-text {
     font-style: italic;
     font-family: var(--font-heading-family);
-    font-size: 18px;
-    color: #000;
-    line-height: 130%;
+    font-size: 22px;
+    color: #1f1f1f;
+    line-height: 110%;
 }
 .section-content__wrapper .section-content .common-text {
-    line-height: 130%;
-    color: #000;
-    font-size: 15px;
+    line-height: 150%;
+    color: #1f1f1f;
+    font-size: 16px;
 }
 @media(max-width: 768px) {
     .section-text-image__wrapper {

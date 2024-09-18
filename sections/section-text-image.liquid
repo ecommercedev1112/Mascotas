@@ -12,42 +12,44 @@
 {% endstyle %}
 
 {{ 'section-text-image.css' | asset_url | stylesheet_tag }}
-
-<div class="section-text-image__wrapper">
-    <div class="section-text-image">
-        <div class="section-text-image__image__wrapper">
-            <div class="section-text-image__image">
-                {% if section.settings.image != blank %}
-                    <img
-                    src="{{ section.settings.image | img_url: "master" }}"
-                    alt="image"
-                    width="{{ section.settings.image.width }}"
-                    height="{{ section.settings.image.height }}"
-                    >                        
-                {% endif %}
+<div class="section-text-image page-width">
+    <div class="section-text-image__wrapper">
+        <div class="section-text-image">
+            <div class="section-text-image__image__wrapper">
+                <div class="section-text-image__image">
+                    {% if section.settings.image != blank %}
+                        <img
+                        src="{{ section.settings.image | img_url: "master" }}"
+                        alt="image"
+                        width="{{ section.settings.image.width }}"
+                        height="{{ section.settings.image.height }}"
+                        >                        
+                    {% endif %}
+                </div>
             </div>
-        </div>
-    </div>        
-    <div class="section-text-image__body">
-        <div class="section-text-image__content">
-            {% if section.settings.title != blank %}
-                <h2 class="section-title">{{ section.settings.title }}</h2>
-            {% endif %}
-            <div class="section-content__wrapper">
-                {% for block in section.blocks %}
-                    <div class="section-content">
-                        <span class="common-text">{{ block.settings.common_text_up }}</span>
-                        <span class="italic-text">{{ block.settings.italic_text }}</span>
-                        <span class="common-text">{{ block.settings.common_text_back }}</span>
-                    </div>
-                {% endfor %}
+        </div>        
+        <div class="section-text-image__body">
+            <div class="section-text-image__content">
+                {% if section.settings.title != blank %}
+                    <h2 class="section-title">{{ section.settings.title }}</h2>
+                {% endif %}
+                <div class="section-content__wrapper">
+                    {% for block in section.blocks %}
+                        <div class="section-content">
+                            <span class="common-text">{{ block.settings.common_text_up }}</span>
+                            <span class="italic-text">{{ block.settings.italic_text }}</span>
+                            <span class="common-text">{{ block.settings.common_text_back }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
-  </div>
+</div>
 
 
-{% schema %}
+
+  {% schema %}
 {
   "name": "t:sections.section-text-image.name",
   "settings": [
