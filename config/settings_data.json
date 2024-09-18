@@ -104,10 +104,10 @@
     "social_facebook_link": "",
     "social_instagram_link": "https:\/\/www.instagram.com\/mascotasofficial\/",
     "social_youtube_link": "",
+    "social_pinterest_link": "https:\/\/in.pinterest.com\/mascotasofficial\/",
     "social_tiktok_link": "https:\/\/www.tiktok.com\/mascotasofficial",
     "social_twitter_link": "",
     "social_snapchat_link": "",
-    "social_pinterest_link": "https:\/\/in.pinterest.com\/mascotasofficial\/",
     "social_tumblr_link": "",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
@@ -154,7 +154,7 @@
             "type": "color",
             "settings": {
               "title": "Lilac",
-              "color": "#fdeaee"
+              "color": "#a47dab"
             }
           },
           "color_dqqHrR": {
@@ -175,21 +175,21 @@
             "type": "color",
             "settings": {
               "title": "Beige",
-              "color": "#dbeefc"
+              "color": "#ede8d0"
             }
           },
           "color_jtiGfr": {
             "type": "color",
             "settings": {
               "title": "Light Blue",
-              "color": "#afdbfc"
+              "color": "#90d5ff"
             }
           },
           "color_ic6PQw": {
             "type": "color",
             "settings": {
               "title": "Ivory",
-              "color": "#e3f0fa"
+              "color": "#ffffe3"
             }
           },
           "color_KPEpEU": {
@@ -205,6 +205,13 @@
               "title": "Blue",
               "color": "#0e6fdf"
             }
+          },
+          "color_pPLJGf": {
+            "type": "color",
+            "settings": {
+              "title": "Red",
+              "color": "#fd4c4d"
+            }
           }
         },
         "block_order": [
@@ -217,7 +224,8 @@
           "color_jtiGfr",
           "color_ic6PQw",
           "color_KPEpEU",
-          "color_fGGCEG"
+          "color_fGGCEG",
+          "color_pPLJGf"
         ],
         "settings": {
         }
