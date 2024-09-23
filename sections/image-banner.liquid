@@ -10,6 +10,12 @@
         content: '';
         display: block;
       }
+      #Banner-{{ section.id }} .banner__media {
+        background-image:url('{{ section.settings.image | img_url: '2048x2048' }}'); 
+        background-size: cover; 
+        background-position: center; 
+        height: 100%;
+      }
     }
 
     @media screen and (min-width: 750px) {
@@ -26,6 +32,17 @@
 {%- style -%}
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+  }
+  @media(max-width: 768px) {
+    .banner__media {
+      background-image: url('{{ section.settings.image | img_url: '2048x2048' }}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+    .banner__media img {
+      display: none !important;
+    }
   }
 {%- endstyle -%}
 

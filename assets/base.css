@@ -122,7 +122,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0 5rem;
+    padding: 0 8rem;
   }
 
   .utility-bar__grid.page-width {
@@ -1072,6 +1072,10 @@ summary::-webkit-details-marker {
   .grid--peek.slider .grid__item:first-of-type {
     margin-left: 1.5rem;
   }
+  .product .grid--peek.slider .grid__item:first-of-type {
+    margin: 0;
+    padding: 0;
+  }
 
   /* Fix to show some space at the end of our sliders in all browsers */
   .grid--peek.slider:after {
@@ -1893,10 +1897,9 @@ input[type='checkbox'] {
 .quantity {
   color: rgba(var(--color-foreground));
   position: relative;
-  width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+  width: 100px;
   display: flex;
   border-radius: var(--inputs-radius);
-  min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
 }
 
 .quantity:after {
@@ -1909,7 +1912,6 @@ input[type='checkbox'] {
   left: var(--inputs-border-width);
   border: 0.1rem solid transparent;
   border-radius: var(--inputs-radius);
-  box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
 }
@@ -1945,7 +1947,6 @@ input[type='checkbox'] {
 }
 
 .quantity__button {
-  width: calc(4.5rem / var(--font-body-scale));
   flex-shrink: 0;
   font-size: 1.8rem;
   border: 0;
@@ -1956,6 +1957,9 @@ input[type='checkbox'] {
   justify-content: center;
   color: rgb(var(--color-foreground));
   padding: 0;
+  border: 1px solid #000;
+  width: 28px;
+  height: 28px;
 }
 
 .quantity__button:first-child {
@@ -3273,6 +3277,15 @@ details-disclosure > details {
 .animate--zoom-in > svg {
   transition: scale var(--duration-short) linear;
   scale: var(--zoom-in-ratio);
+}
+
+@media(max-width: 768px) {
+  .page-width {
+    padding: 0 1.5rem;
+  }
+  .announcement-bar__message span {
+    font-size: 12px;
+  }
 }
 
 /* Animations */

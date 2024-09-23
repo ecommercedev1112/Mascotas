@@ -283,6 +283,7 @@
   line-height: 130%;
   padding-bottom: 16px;
   font-family: var(--font-heading-family);
+  min-height: 72px;
 }
 
 @media screen and (min-width: 990px) {
@@ -509,6 +510,7 @@
   .card__heading a {
     font-size: 18px;
     min-height: 48px;
+    padding-bottom: 5px;
   }
   .card-information .price__regular .price-item--regular {
     font-size: 15px;

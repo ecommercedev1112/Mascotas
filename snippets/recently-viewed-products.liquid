@@ -1,0 +1,22 @@
+<script src="{{ 'recently-viewed-products.js' | asset_url }}" defer="defer"></script>
+
+<div class="recently-viewed-products_container page-width swiper-container swiper-recently" data-inventory='{{ settings.inventory_threshold }}'>
+    <h2>{{ 'sections.recently_viewed_product.title' | t }}</h2>
+    <div
+        id="recently_viewed_slider"
+        class="swiper-wrapper recently-viewed-products"
+        role="list"
+        aria-label="{{ 'general.slider.name' | t }}"
+    ></div>
+    <div class="btn-wrapper recently-arrow__btn">
+        <div class="swiper-button-prev">
+            {% render 'arrow-prev' %}     
+        </div>
+        <div class="swiper-button-next">
+            {% render 'arrow-next' %}
+        </div>
+    </div>
+</div>
+<script>window.outStockText = '{{- 'products.product.inventory_out_of_stock' | t -}}'</script>
+<script>window.inStockText = '{{- 'products.product.inventory_in_stock' | t -}}'</script>
+<script>window.discountText = '{{ 'customer.order.discount_statement'| t: percentage: discount }}'</script>

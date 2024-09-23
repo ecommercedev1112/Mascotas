@@ -359,6 +359,9 @@
       "remove_all_items_confirmation": "Remove all {{ quantity }} items from your cart?",
       "remove_all": "Remove all",
       "cancel": "Cancel"
+    },
+    "recently_viewed_product": {
+      "title": "Recently viewed items"
     }
   },
   "localization": {
@@ -444,7 +447,8 @@
       "tracking_company": "Carrier",
       "tracking_number": "Tracking number",
       "subtotal": "Subtotal",
-      "total_duties": "Duties"
+      "total_duties": "Duties",
+      "discount_statement": "{{ percentage }}% Off"
     },
     "orders": {
       "title": "Order history",

@@ -9,8 +9,8 @@
     "body_scale": 100,
     "page_width": 1440,
     "spacing_sections": 0,
-    "spacing_grid_horizontal": 8,
-    "spacing_grid_vertical": 8,
+    "spacing_grid_horizontal": 24,
+    "spacing_grid_vertical": 40,
     "animations_reveal_on_scroll": true,
     "animations_hover_elements": "default",
     "buttons_border_thickness": 1,
@@ -212,6 +212,20 @@
               "title": "Red",
               "color": "#fd4c4d"
             }
+          },
+          "color_bidFeN": {
+            "type": "color",
+            "settings": {
+              "title": "Lavender",
+              "color": "#d3d3ff"
+            }
+          },
+          "color_YPRwTE": {
+            "type": "color",
+            "settings": {
+              "title": "Nude",
+              "color": "#f7d9bc"
+            }
           }
         },
         "block_order": [
@@ -225,7 +239,9 @@
           "color_ic6PQw",
           "color_KPEpEU",
           "color_fGGCEG",
-          "color_pPLJGf"
+          "color_pPLJGf",
+          "color_bidFeN",
+          "color_YPRwTE"
         ],
         "settings": {
         }
@@ -522,7 +538,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "input#your-name {border: 4px solid black;}",
+      "input#your-name {border-bottom: 1px solid #333;}",
       "h1,.h1 {text-transform: uppercase;}",
       ".banner--desktop-transparent .banner__box {background-color: transparent;}",
       "@media screen and (max-width: 749px) {.banner:not(.banner--mobile-bottom):not(.email-signup-banner) .banner__box {background: #f3f0f0c9; margin: 40px; } h1, .h1 {font-size: 20px; }}",

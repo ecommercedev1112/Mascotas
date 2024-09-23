@@ -366,8 +366,28 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-
     
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          const swiper1 = new Swiper('.swiper-related', {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 24,
+            loop: false,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+              1024: {
+                slidesPerView: 1,
+                spaceBetween: 12,
+              },
+            },
+          });  
+        }, 2000); // Adjust the delay as needed
+      });
+    </script> 
   </body>
 </html>

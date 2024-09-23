@@ -17,6 +17,7 @@
         },
         "rating_LdT4ry": {
           "type": "rating",
+          "disabled": true,
           "settings": {
           }
         },
@@ -28,6 +29,7 @@
         },
         "custom_liquid_whX9Cd": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "{{product.metafields.custom.short_description1}}"
           }
@@ -43,8 +45,14 @@
             "picker_type": "button"
           }
         },
+        "modify_text_gWFX4x": {
+          "type": "modify_text",
+          "settings": {
+          }
+        },
         "custom_liquid_8Gd3xw": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"tags-f\">                     \n {% if product.tags contains 'female' %}\n<b>Gender<\/b>\n<p>Female<\/p>\n{% endif %}\n\n {% if product.tags contains 'Male' %}\n<b>Gender<\/b>\n<p>Male<\/p>\n{% endif %}\n\n<\/div>"
           }
@@ -92,47 +100,27 @@
           "settings": {
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
+        "text_describe_LYJ9fT": {
+          "type": "text_describe",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "text_describe": "<p>Crafted from the softest combed Pima cotton. This essential infuses their wardrobe with a touch of casual elegance.<\/p><p>Crafted from the softest combed Pima cotton yarn, it promises a luxuriously casual feel that pampers even the most sensitive fur. Designed for everyday comfort, this essential piece elevates your canine companion's wardrobe with a touch of timeless sophistication. Made from suede fabric in 100% cotton worked with combed Pima 30\/1 thread, it's hypoallergenic, ideal for sensitive skin, soft and comfortable, perfect for everyday use.<\/p>"
           }
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
-        "collapsible_tab_KzpEQK": {
+        "collapsible_tab_mgRjd6": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "DESCRIPTION",
+            "heading": "Size & Fit",
             "custom_liquid": "{{ product.description }}",
             "icon": "none",
             "content": "",
             "page": ""
           }
         },
-        "collapsible_tab_PKPQkp": {
-          "type": "collapsible_tab",
+        "buy_buttons": {
+          "type": "buy_buttons",
           "settings": {
-            "heading": "SHIPPING",
-            "custom_liquid": "",
-            "icon": "none",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible_tab_mgRjd6": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "MATERIAL",
-            "custom_liquid": "",
-            "icon": "none",
-            "content": "",
-            "page": ""
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
           }
         }
       },
@@ -144,6 +132,7 @@
         "custom_liquid_whX9Cd",
         "price",
         "variant_picker",
+        "modify_text_gWFX4x",
         "custom_liquid_8Gd3xw",
         "f756b58e-2ccd-48bf-a1ef-a82d270120d6",
         "popup_zktq8a",
@@ -151,11 +140,9 @@
         "popup_FqKEq3",
         "custom_liquid_rEYDGQ",
         "quantity_selector",
-        "buy_buttons",
-        "share",
-        "collapsible_tab_KzpEQK",
-        "collapsible_tab_PKPQkp",
-        "collapsible_tab_mgRjd6"
+        "text_describe_LYJ9fT",
+        "collapsible_tab_mgRjd6",
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -169,26 +156,44 @@
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "related-products": {
       "type": "related-products",
+      "blocks": {
+        "variant_picker_a7TyMz": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        }
+      },
+      "block_order": [
+        "variant_picker_a7TyMz"
+      ],
       "settings": {
-        "heading": "You may also like",
+        "heading": "You might be interested in",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "background-1",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "recently_viewed_product_tadGaT": {
+      "type": "recently-viewed-product",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "17116470552e1d8d0d": {
@@ -211,6 +216,7 @@
   "order": [
     "main",
     "related-products",
+    "recently_viewed_product_tadGaT",
     "17116470552e1d8d0d"
   ]
 }

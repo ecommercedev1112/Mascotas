@@ -1,0 +1,30 @@
+<script>
+    const MAX_PRODUCTS = 8;
+
+    const setRecentlyViewedPdp = () => {
+        const pdpData = {
+            productTitle: "{{ product.title | escape }}",
+            productImg: "{% if product.featured_image %}{{ product.featured_image | image_url: width: 302 }}{% endif %}",
+            productPrice: "{{ product.price | money | remove_first: '' }}",
+            compareAtPrice: "{{ product.compare_at_price | money | remove_first: '' }}",
+            productLabel: "{{ product.metafields.custom.product_label }}",
+            inventoryQty: "{{ product.selected_or_first_available_variant.inventory_quantity }}",
+            productUrl: "{{ product.url }}",
+        };
+
+        const recentData = localStorage.getItem('recently_viewed_mascotas');
+        let products = recentData ? JSON.parse(recentData) : [];
+        const isProductInList = products.some(product => product.productTitle === pdpData.productTitle);
+
+        if (!isProductInList) {
+            if (products.length >= MAX_PRODUCTS) {
+                products.shift();
+            }
+            products.push(pdpData);
+        }
+
+        localStorage.setItem('recently_viewed_mascotas', JSON.stringify(products));
+    }
+
+    setRecentlyViewedPdp();
+</script>

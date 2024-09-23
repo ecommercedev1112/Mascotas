@@ -987,7 +987,7 @@
             },
             "header__1": {
               "content": "Social media icons"
-            },            
+            },
             "show_social": {
               "label": "Show social media icons",
               "info": "To display your social media accounts, link them in your [theme settings](\/editor?context=theme&category=social%20media)."
@@ -1961,6 +1961,14 @@
         "title": {
           "name": "Title"
         },
+        "text_describe": {
+          "name": "Text describe",
+          "settings": {
+            "text_describe": {
+              "label": "Text describe"
+            }
+          }
+        },
         "price": {
           "name": "Price"
         },
@@ -2315,6 +2323,9 @@
               "label": "Third heading"
             }
           }
+        },
+        "modify_text": {
+          "name": "Modify text"
         }
       },
       "settings": {
@@ -2814,6 +2825,22 @@
           },
           "options__2": {
             "label": "2 columns"
+          }
+        }
+      },
+      "blocks": {
+        "variant_picker": {
+          "name": "Variant picker",
+          "settings": {
+            "picker_type": {
+              "label": "Type",
+              "options__1": {
+                "label": "Dropdown"
+              },
+              "options__2": {
+                "label": "Pills"
+              }
+            }
           }
         }
       }
@@ -3484,6 +3511,12 @@
       },
       "presets": {
         "name": "Video section"
+      }
+    },
+    "recently-viewed-product": {
+      "name": "Recently viewed product",
+      "presets": {
+        "name": "Recently viewed product"
       }
     }
   }

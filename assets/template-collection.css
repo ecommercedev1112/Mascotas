@@ -113,12 +113,6 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-.collection slider-component ul {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: unset;
-}
 @media(max-width: 768px) {
   .collection__title .subtitle {
     font-size: 18px;
@@ -138,8 +132,5 @@
   }
   .collection .slider-mobile-gutter .slider-buttons {
     display: none;
-  }
-  .collection slider-component ul {
-    gap: 12px;
   }
 }

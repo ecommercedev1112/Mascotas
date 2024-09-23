@@ -9,11 +9,13 @@
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
+
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
+    {% assign optionSize = product.options_with_values.size %}
     <variant-radios
       id="variant-radios-{{ section.id }}"
-      class="no-js-hidden"
+      class="no-js-hidden {% if optionSize < 2 %} color-first {% endif %}"
       data-section="{{ section.id }}"
       data-url="{{ product.url }}"
       {% if update_url == false %}
