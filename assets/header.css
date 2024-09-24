@@ -59,6 +59,7 @@
 }
 .header__icon.header__icon--account.link {
     text-decoration: none;
+    width: 40%;
 }
 
 @media(max-width: 768px) {
@@ -98,5 +99,8 @@
     .header__icons.header__icons--localization {
         width: 20%;
         justify-content: center;
+    }
+    .header__icon.swym-wishlist {
+        display: none;
     }
 }

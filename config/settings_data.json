@@ -273,6 +273,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "5946647744298494267": {
+        "type": "shopify:\/\/apps\/wishlist-plus\/blocks\/wishlist-app-embed\/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
@@ -550,7 +556,7 @@
       ".ecb-feature-item p {margin: 0; font-size: 11px;}",
       ".ecb-feature-item img {display: inline; padding: 20px;}",
       ".ecb-grid > div > .shopify-block {padding: 20px;}",
-      "#select-size {padding: 10px; width: 150px; border: 2px solid grey; border-radius: 4px; font-size: 15px;}"
+      "#select-size {padding: 2px 0; width: 150px; font-size: 15px; border: unset; border-bottom: 1px solid #000; margin-left: 5px;}"
     ]
   }
 }

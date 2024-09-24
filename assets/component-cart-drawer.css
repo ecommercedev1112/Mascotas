@@ -78,6 +78,8 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 .drawer__heading {
   margin: 0 0 1rem;
+  font-size: 32px !important;
+  text-transform: uppercase;
 }
 
 .drawer__close {
@@ -205,7 +207,7 @@ cart-drawer-items {
 .cart-drawer .cart-item {
   display: grid;
   grid-template: repeat(2, auto) / repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
   margin-bottom: 0;
 }
 
@@ -243,6 +245,10 @@ cart-drawer-items {
 
 .cart-drawer .cart-items th {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .cart-drawer .cart-item:last-child {

@@ -8,6 +8,7 @@
   {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 {% if product.tags contains 'chart2' %}
   <style>
@@ -110,6 +111,9 @@
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
                   <h4 class="product-title">{{ product.title | escape }}</h4>
+                  <a href="#swym-wishlist" class="header__icon swym-wishlist">
+                    {% render 'icon-wishlist' %}
+                  </a>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
                       {{ product.title | escape }}
@@ -168,104 +172,107 @@
                     </div>
                     <span class="describe">*All our clothes have both front and hind legs by default.</span>
                     <div class="customize-size">
-                      <p class="title">Which size firts my furry friend?</p>
-                      <p> In the size chart, we give examples of breeds to five an indication of each size.</p>
-                      <p>However, to avoid any inconvenience of having to return or exchange an item, we highly recommend to measure your friend following the instructions below.</p>
-                      <p class="title">How to measure?</p>
-                      <div class="measure-description">
-                        <p>1. <strong>Back</strong> - measure length from base of the neck to base of the tail</p>
-                        <p>2. <strong>Neck</strong> - measure around the neck, allowing room for comfortable neck</p>
-                        <p>3. <strong>Chest</strong> - measure widest point around the chest, going all the way around</p>
-                      </div>
-                      <div class="measure-table">
-                        <div class="header">
-                          <p><strong>1.Length</strong></p>
-                          <p class="length-size">XS 22-26cm</p>
-                          <p class="length-size">S 30-35cm</p>
-                          <p class="length-size">M 35-40cm</p>
-                          <p class="length-size">L 40-45cm</p>
-                          <p class="length-size">XL 45-50cm</p>
-                          <p class="length-size">XXL 60-65cm</p>
+                      <p class="title accordion">Customize your Product</p>
+                      <div class="accordion-content">
+                        <p class="title">Which size firts my furry friend?</p>
+                        <p> In the size chart, we give examples of breeds to give an indication of each size.</p>
+                        <p>However, to avoid any inconvenience of having to return or exchange an item, we highly recommend to measure your friend following the instructions below.</p>
+                        <p class="title">How to measure?</p>
+                        <div class="measure-description">
+                          <p>1. <strong>Back</strong> - measure length from base of the neck to base of the tail</p>
+                          <p>2. <strong>Neck</strong> - measure around the neck, allowing room for comfortable neck</p>
+                          <p>3. <strong>Chest</strong> - measure widest point around the chest, going all the way around</p>
                         </div>
-                        
-                        <div class="header">
-                          <p><strong>2.Neck</strong></p>
-                          <p class="neck-size">20-20cm</p>
-                          <p class="neck-size">25-40cm</p>
-                          <p class="neck-size">30-55cm</p>
-                          <p class="neck-size">35-65cm</p>
-                          <p class="neck-size">40-70cm</p>
-                          <p class="neck-size">45-70cm</p>
-                        </div>
+                        <div class="measure-table">
+                          <div class="header">
+                            <p><strong>1.Length</strong></p>
+                            <p class="length-size">XS 22-26cm</p>
+                            <p class="length-size">S 30-35cm</p>
+                            <p class="length-size">M 35-40cm</p>
+                            <p class="length-size">L 40-45cm</p>
+                            <p class="length-size">XL 45-50cm</p>
+                            <p class="length-size">XXL 60-65cm</p>
+                          </div>
+                          
+                          <div class="header">
+                            <p><strong>2.Neck</strong></p>
+                            <p class="neck-size">20-20cm</p>
+                            <p class="neck-size">25-40cm</p>
+                            <p class="neck-size">30-55cm</p>
+                            <p class="neck-size">35-65cm</p>
+                            <p class="neck-size">40-70cm</p>
+                            <p class="neck-size">45-70cm</p>
+                          </div>
 
-                        <div class="header">
-                          <p><strong>3.Chest</strong></p>
-                          <p class="chest-size">30-35cm</p>
-                          <p class="chest-size">40-45cm</p>
-                          <p class="chest-size">45-50cm</p>
-                          <p class="chest-size">50-55cm</p>
-                          <p class="chest-size">55-65cm</p>
-                          <p class="chest-size">65-70cm</p>
-                        </div>
-                      </div>
-                      <p class="title-select">Does your furry friend have specifc measures? Tell us!</p>
-                      <div class="size-forms">
-                        <div class="dog_info line-item-property__field">
-                          <label for="length" class="size-form__title">Length: </label>
-                          <input id="length" type="number" name="properties[Length]" form="product-form-{{ section.id }}">
-                          <div class="d-flex1">
-                            <p class="line-item-property__field line-1">
-                              <input  value="Cm" id="unit" type="checkbox" name="properties[Unit(Length)]" form="product-form-{{ section.id }}" >
-                              <label for="unit">
-                                <span class="sizee">Cm</span>
-                              </label>                
-                            </p>
-                            <p>/</p>
-                            <p class="line-item-property__field line-1">
-                              <input value="Inch" id="unit1" type="checkbox" name="properties[Unit(Length)]" form="product-form-{{ section.id }}" >
-                              <label for="unit1">
-                                  <span class="sizee">Inch</span>
-                              </label>
-                            </p>                
+                          <div class="header">
+                            <p><strong>3.Chest</strong></p>
+                            <p class="chest-size">30-35cm</p>
+                            <p class="chest-size">40-45cm</p>
+                            <p class="chest-size">45-50cm</p>
+                            <p class="chest-size">50-55cm</p>
+                            <p class="chest-size">55-65cm</p>
+                            <p class="chest-size">65-70cm</p>
                           </div>
                         </div>
-                        <div class="dog_info line-item-property__field">
-                          <label for="neck" class="size-form__title">Neck: </label>
-                          <input id="neck" type="number" name="properties[Neck]" form="product-form-{{ section.id }}">
-                          <div class="d-flex1">
-                            <p class="line-item-property__field line-1">
-                              <input  value="Cm" id="unit2" type="checkbox" name="properties[Unit(Neck)]" form="product-form-{{ section.id }}" >
-                              <label for="unit2">
-                                <span class="sizee">Cm</span>
-                              </label>                
-                            </p>
-                            <p>/</p>
-                            <p class="line-item-property__field line-1">
-                              <input value="Inch" id="unit3" type="checkbox" name="properties[Unit(Neck)]" form="product-form-{{ section.id }}" >
-                              <label for="unit3">
-                                  <span class="sizee">Inch</span>
-                              </label>
-                            </p>                
+                        <p class="title-select">Does your furry friend have specifc measures? Tell us!</p>
+                        <div class="size-forms">
+                          <div class="dog_info line-item-property__field">
+                            <label for="length" class="size-form__title">Length: </label>
+                            <input id="length" type="number" name="properties[Length]" form="product-form-{{ section.id }}">
+                            <div class="d-flex1">
+                              <p class="line-item-property__field line-1">
+                                <input  value="Cm" id="unit" type="checkbox" name="properties[Unit(Length)]" form="product-form-{{ section.id }}" >
+                                <label for="unit">
+                                  <span class="sizee">Cm</span>
+                                </label>                
+                              </p>
+                              <p class="distance-symbol">/</p>
+                              <p class="line-item-property__field line-1">
+                                <input value="Inch" id="unit1" type="checkbox" name="properties[Unit(Length)]" form="product-form-{{ section.id }}" >
+                                <label for="unit1">
+                                    <span class="sizee">Inch</span>
+                                </label>
+                              </p>                
+                            </div>
                           </div>
-                        </div>
+                          <div class="dog_info line-item-property__field">
+                            <label for="neck" class="size-form__title">Neck: </label>
+                            <input id="neck" type="number" name="properties[Neck]" form="product-form-{{ section.id }}">
+                            <div class="d-flex1">
+                              <p class="line-item-property__field line-1">
+                                <input  value="Cm" id="unit2" type="checkbox" name="properties[Unit(Neck)]" form="product-form-{{ section.id }}" >
+                                <label for="unit2">
+                                  <span class="sizee">Cm</span>
+                                </label>                
+                              </p>
+                              <p class="distance-symbol">/</p>
+                              <p class="line-item-property__field line-1">
+                                <input value="Inch" id="unit3" type="checkbox" name="properties[Unit(Neck)]" form="product-form-{{ section.id }}" >
+                                <label for="unit3">
+                                    <span class="sizee">Inch</span>
+                                </label>
+                              </p>                
+                            </div>
+                          </div>
 
-                        <div class="dog_info line-item-property__field">
-                          <label for="Chest" class="size-form__title">Chest: </label>
-                          <input id="chest" type="number" name="properties[Chest]" form="product-form-{{ section.id }}">
-                          <div class="d-flex1">
-                            <p class="line-item-property__field line-1">
-                              <input  value="Cm" id="unit4" type="checkbox" name="properties[Unit(Chest)]" form="product-form-{{ section.id }}" >
-                              <label for="unit4">
-                                <span class="sizee">Cm</span>
-                              </label>                
-                            </p>
-                            <p>/</p>
-                            <p class="line-item-property__field line-1">
-                              <input value="Inch" id="unit5" type="checkbox" name="properties[Unit(Chest)]" form="product-form-{{ section.id }}" >
-                              <label for="unit5">
-                                  <span class="sizee">Inch</span>
-                              </label>
-                            </p>                
+                          <div class="dog_info line-item-property__field">
+                            <label for="Chest" class="size-form__title">Chest: </label>
+                            <input id="chest" type="number" name="properties[Chest]" form="product-form-{{ section.id }}">
+                            <div class="d-flex1">
+                              <p class="line-item-property__field line-1">
+                                <input  value="Cm" id="unit4" type="checkbox" name="properties[Unit(Chest)]" form="product-form-{{ section.id }}" >
+                                <label for="unit4">
+                                  <span class="sizee">Cm</span>
+                                </label>                
+                              </p>
+                              <p class="distance-symbol">/</p>
+                              <p class="line-item-property__field line-1">
+                                <input value="Inch" id="unit5" type="checkbox" name="properties[Unit(Chest)]" form="product-form-{{ section.id }}" >
+                                <label for="unit5">
+                                    <span class="sizee">Inch</span>
+                                </label>
+                              </p>                
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -382,6 +389,26 @@
                         }
                       }
                     </style>
+                    <script>
+                      const accordionBtns = document.querySelectorAll(".accordion");
+                      accordionBtns.forEach((accordion) => {
+                        accordion.onclick = function () {
+                          this.classList.toggle("is-open");
+
+                          let content = this.nextElementSibling;
+                          console.log(content);
+
+                          if (content.style.maxHeight) {
+                            //this is if the accordion is open
+                            content.style.maxHeight = null;
+                          } else {
+                            //if the accordion is currently closed
+                            content.style.maxHeight = content.scrollHeight + "px";
+                            console.log(content.style.maxHeight);
+                          }
+                        };
+                      });
+                    </script>
                     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                     {{ form | payment_terms }}
                   {%- endform -%}
