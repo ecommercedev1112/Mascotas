@@ -16,6 +16,7 @@
       "block_order": [
         "announcement-bar-0"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-51abd208-5617-41d4-9a32-2251b38c5f8e",
         "show_line_separator": true,

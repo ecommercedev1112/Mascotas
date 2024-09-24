@@ -1902,4 +1902,7 @@ a.product__text {
   .line-item-property__field.line-3 label {
     font-size: 16px;
   }
+  .customize-size .accordion-content {
+    width: 100%;
+  }
 }
