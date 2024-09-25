@@ -10,6 +10,17 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "blocks": {
+        "variant_picker_7JB8Rw": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        }
+      },
+      "block_order": [
+        "variant_picker_7JB8Rw"
+      ],
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,

@@ -116,6 +116,9 @@
 .collection .slider-buttons {
   display: none;
 }
+.collection .variant-color-swatch .item_size_ {
+  display: none;
+}
 @media(max-width: 768px) {
   .collection__title .subtitle {
     font-size: 18px;

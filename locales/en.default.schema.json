@@ -1853,6 +1853,22 @@
             "label": "2 columns"
           }
         }
+      },
+      "blocks": {
+        "variant_picker": {
+          "name": "Variant picker",
+          "settings": {
+            "picker_type": {
+              "label": "Type",
+              "options__1": {
+                "label": "Dropdown"
+              },
+              "options__2": {
+                "label": "Pills"
+              }
+            }
+          }
+        }
       }
     },
     "main-list-collections": {

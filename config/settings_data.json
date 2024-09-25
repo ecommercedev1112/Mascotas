@@ -161,35 +161,35 @@
             "type": "color",
             "settings": {
               "title": "Jean",
-              "color": "#497ca2"
+              "color": "#527ea4"
             }
           },
           "color_H4nAkh": {
             "type": "color",
             "settings": {
               "title": "Yellow",
-              "color": "#f6e78a"
+              "color": "#e9d854"
             }
           },
           "color_79gyLb": {
             "type": "color",
             "settings": {
               "title": "Beige",
-              "color": "#ede8d0"
+              "color": "#ddbf99"
             }
           },
           "color_jtiGfr": {
             "type": "color",
             "settings": {
               "title": "Light Blue",
-              "color": "#90d5ff"
+              "color": "#b5dcd5"
             }
           },
           "color_ic6PQw": {
             "type": "color",
             "settings": {
               "title": "Ivory",
-              "color": "#ffffe3"
+              "color": "#ede1bc"
             }
           },
           "color_KPEpEU": {
@@ -203,14 +203,14 @@
             "type": "color",
             "settings": {
               "title": "Blue",
-              "color": "#0e6fdf"
+              "color": "#012350"
             }
           },
           "color_pPLJGf": {
             "type": "color",
             "settings": {
               "title": "Red",
-              "color": "#fd4c4d"
+              "color": "#dc0b33"
             }
           },
           "color_bidFeN": {
@@ -225,6 +225,69 @@
             "settings": {
               "title": "Nude",
               "color": "#f7d9bc"
+            }
+          },
+          "color_tj3RWT": {
+            "type": "color",
+            "settings": {
+              "title": "Black & Pink",
+              "color": "#000000"
+            }
+          },
+          "color_HVBBqd": {
+            "type": "color",
+            "settings": {
+              "title": "Dark Green",
+              "color": "#495744"
+            }
+          },
+          "color_QHpaki": {
+            "type": "color",
+            "settings": {
+              "title": "Gray",
+              "color": "#6b6961"
+            }
+          },
+          "color_Rkkpwp": {
+            "type": "color",
+            "settings": {
+              "title": "Cambridge Blue",
+              "color": "#91aba0"
+            }
+          },
+          "color_ihbFxq": {
+            "type": "color",
+            "settings": {
+              "title": "Militar Green",
+              "color": "#6d7b52"
+            }
+          },
+          "color_Mc3d6t": {
+            "type": "color",
+            "settings": {
+              "title": "Pink & Black",
+              "color": "#fdced6"
+            }
+          },
+          "color_Gjj7p7": {
+            "type": "color",
+            "settings": {
+              "title": "Ivory & White",
+              "color": "#ede1bc"
+            }
+          },
+          "color_KtBpNA": {
+            "type": "color",
+            "settings": {
+              "title": "Melange",
+              "color": "#edecf3"
+            }
+          },
+          "color_tmAGkg": {
+            "type": "color",
+            "settings": {
+              "title": "Brown",
+              "color": "#ddbf99"
             }
           }
         },
@@ -241,7 +304,16 @@
           "color_fGGCEG",
           "color_pPLJGf",
           "color_bidFeN",
-          "color_YPRwTE"
+          "color_YPRwTE",
+          "color_tj3RWT",
+          "color_HVBBqd",
+          "color_QHpaki",
+          "color_Rkkpwp",
+          "color_ihbFxq",
+          "color_Mc3d6t",
+          "color_Gjj7p7",
+          "color_KtBpNA",
+          "color_tmAGkg"
         ],
         "settings": {
         }
