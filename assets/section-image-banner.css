@@ -141,6 +141,11 @@
   }
 }
 
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .banner--large:not(.banner--adapt) {
+    min-height: 52rem;
+  }
+}
 @media screen and (max-width: 749px) {
   .banner:not(.banner--stacked) {
     flex-direction: row;

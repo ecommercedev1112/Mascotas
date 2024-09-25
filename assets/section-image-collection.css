@@ -1,6 +1,5 @@
-.section-image-collection__wrapper.page-width {
-    padding-left: 0;
-    padding-right: 0;
+.section-image-collection__wrapper {
+    padding: 0 8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,9 +59,10 @@
     color: #000;
 }
 @media(max-width: 768px) {
-    .section-image-collection__wrapper.page-width {
+    .section-image-collection__wrapper {
         flex-direction: column;
         gap: 32px;
+        padding: 0 15px;
     }
     .section-image-collection__image,
     .section-image-collection__body,

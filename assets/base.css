@@ -2514,6 +2514,9 @@ product-info .loading__spinner:not(.hidden) ~ *,
   .header--mobile-left {
     grid-template-columns: auto 2fr 1fr;
   }
+  .header__heading-logo-wrapper {
+    width: 85%;
+  }
 }
 
 @media screen and (min-width: 990px) {
@@ -2819,7 +2822,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 1.2rem;
+  padding: 1.2rem 0;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
 }

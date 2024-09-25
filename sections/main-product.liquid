@@ -34,7 +34,7 @@
     padding-bottom: 0;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 990px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -145,16 +145,16 @@
 
               {%- when 'modify_text' -%}
                 <div class="modify-section" {{ block.shopify_attributes }}>
-                  <h4>Customize your orders</h4>
+                  <h4>Customize your order</h4>
                   {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                   {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
                     <p class="dog_info line-item-property__field">
-                      <label for="Add Your Pet Name">Add Your Pet Name: </label>
+                      <label for="Add Your Pet Name">Your Pet’s Name: </label>
                       <input id="your-name" type="text" name="properties[Add Your Pet Name]" form="product-form-{{ section.id }}">
                     </p>
                     
                     <p class="dog_info line-item-property__field line-2">
-                      <label for="Birthday">Birth Date: </label>
+                      <label for="Birthday">Birthday: </label>
                       <input type="date" name="properties[date]" value="product.attributes[date]" form="product-form-{{ section.id }}" class="birthday-form">
                     </p>
                     <div class="d-flex1">
@@ -174,7 +174,7 @@
                     <span class="describe">*All our clothes have both front and hind legs by default.</span>
                     <div class="customize-size">
                       <p class="line-item-property__field line-3">
-                        <label>Choose Size</label><br>
+                        <label>Choose Size: </label><br>
                         <select id="select-size" name="properties[Select Size]" form="product-form-{{ section.id }}">
                           <option value="X-small">X-small</option>
                           <option value="Small">Small</option>
@@ -183,7 +183,7 @@
                           <option value="XL">XL</option>
                           <option value="2XL">2XL</option>
                           <option value="3XL">3XL</option>
-                          <option value="custom size">Customize your orders</option>
+                          <option value="custom size">Custom Size</option>
                         </select>
                       </p>
                       <p class="title accordion show_accordion hidden">Customize your Product</p>
@@ -235,36 +235,6 @@
                               <td>65-70cm</td>
                             </tr>
                           </table> 
-
-                          {% comment %} <div class="header">
-                            <p><strong>1.Length</strong></p>
-                            <p class="length-size">XS 22-26cm</p>
-                            <p class="length-size">S 30-35cm</p>
-                            <p class="length-size">M 35-40cm</p>
-                            <p class="length-size">L 40-45cm</p>
-                            <p class="length-size">XL 45-50cm</p>
-                            <p class="length-size">XXL 60-65cm</p>
-                          </div>
-                          
-                          <div class="header">
-                            <p><strong>2.Neck</strong></p>
-                            <p class="neck-size">20-20cm</p>
-                            <p class="neck-size">25-40cm</p>
-                            <p class="neck-size">30-55cm</p>
-                            <p class="neck-size">35-65cm</p>
-                            <p class="neck-size">40-70cm</p>
-                            <p class="neck-size">45-70cm</p>
-                          </div>
-
-                          <div class="header">
-                            <p><strong>3.Chest</strong></p>
-                            <p class="chest-size">30-35cm</p>
-                            <p class="chest-size">40-45cm</p>
-                            <p class="chest-size">45-50cm</p>
-                            <p class="chest-size">50-55cm</p>
-                            <p class="chest-size">55-65cm</p>
-                            <p class="chest-size">65-70cm</p>
-                          </div> {% endcomment %}
                         </div>
                         <p class="title-select">Does your furry friend have specifc measures? Tell us!</p>
                         <div class="size-forms">
@@ -374,11 +344,13 @@
                       }
                       .product__info-wrapper .modify-section h4 {
                         font-weight: 700;
-                        text-transform: uppercase;
+                        text-transform: capitalize;
                       } 
 
                       .modify-section .describe {
                         font-size: 14px;
+                        display: block;
+                        padding-top: 10px;
                       }
                       .d-flex1 .line-1 input[type=checkbox]:checked+label {
                         font-weight: 600;
@@ -457,38 +429,30 @@
                         }
                       }
                     </style>
-                    <script>
-                      document.querySelector('#select-size').addEventListener('change', function(e) {
-                        if(e.target.value === "custom size") {
-                          console.log(e.target.value, "===>")
-                          {% comment %} document.querySelector('.show_accordion').classList.remove('hidden');    {% endcomment %}
-                          document.querySelector('.accordion-content').classList.remove('hidden');                          
-                          document.querySelector('.show_accordion').click();                          
-                        } else {
-                          {% comment %} document.querySelector('.show_accordion').classList.add('hidden');                           {% endcomment %}
-                          document.querySelector('.accordion-content').classList.add('hidden');                          
-                          document.querySelector('.show_accordion').click();                          
-                        }
-                      })
-
+                    <script>                      
                       const accordionBtns = document.querySelectorAll(".accordion");
                       accordionBtns.forEach((accordion) => {
                         accordion.onclick = function () {
                           this.classList.toggle("is-open");
-
                           let content = this.nextElementSibling;
-                          console.log(content);
-
                           if (content.style.maxHeight) {
-                            //this is if the accordion is open
                             content.style.maxHeight = null;
                           } else {
-                            //if the accordion is currently closed
                             content.style.maxHeight = content.scrollHeight + "px";
-                            console.log(content.style.maxHeight);
                           }
                         };
                       });
+                      document.querySelector('#select-size').addEventListener('change', function(e) {
+                        if(e.target.value === "custom size") {
+                          document.querySelector('.accordion-content').classList.remove('hidden');                          
+                          document.querySelector('.show_accordion').click();                          
+                          console.log(e.target.value, "open===>")
+                        } else {
+                          document.querySelector('.accordion-content').classList.add('hidden');                          
+                          document.querySelector('.show_accordion').click();  
+                          console.log(e.target.value, "close===>")
+                        }
+                      })
                     </script>
                     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                     {{ form | payment_terms }}

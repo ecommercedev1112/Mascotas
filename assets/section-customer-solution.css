@@ -113,7 +113,7 @@
     .section-customer-solution__body .section-customer-solution__info,
     .section-customer-solution__body .section-customer-solution__content {
         width: 100%;
-    }
+    }    
     .section-customer-solution__body .section-customer-solution__content {
         gap: 0;
     }
@@ -142,5 +142,8 @@
     .section-customer-solution__body {
         flex-direction: column;
         gap: 20px;
+    }
+    .section-customer-solution__body .section-customer-solution__info {
+        margin-top: 0;
     }
 }
