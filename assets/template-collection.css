@@ -103,7 +103,7 @@
   color: #000;
 }
 .collection__view-all {
-  padding-top: 56px;
+  padding-top: 40px;
 }
 .collection__view-all a {
   color: #000;
@@ -112,6 +112,9 @@
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
+}
+.collection .slider-buttons {
+  display: none;
 }
 @media(max-width: 768px) {
   .collection__title .subtitle {

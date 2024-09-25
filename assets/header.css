@@ -61,8 +61,18 @@
     text-decoration: none;
     width: 40%;
 }
-
-@media(max-width: 768px) {
+@media (min-width: 768px) and (max-width: 990px) {
+    .header {
+        flex-direction: row;
+    }
+    .header header-drawer {
+        margin-left: 2rem;
+    }
+    .center-header__wrapper {
+        padding: 2rem 4rem;
+    }
+}
+@media (max-width: 768px) {
     .header__icon.header__icon--search p.desktop {
         display: none;
     }

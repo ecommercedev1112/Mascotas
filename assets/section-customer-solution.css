@@ -93,6 +93,15 @@
     width: 200px;
     height: auto;
 } 
+@media screen and (min-width: 750px) and (max-width: 989px) {
+    .section-customer-solution__wrapper.page-width {
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+    .section-customer-solution__body .section-customer-solution__info {
+        width: 40%;
+    }
+}
 @media(max-width: 768px) {
     .section-customer-solution__wrapper h2 {
         padding-bottom: 3.2rem;
@@ -100,14 +109,13 @@
     .section-customer-solution__wrapper.page-width {
         padding-left: 15px;
         padding-right: 15px;
-    }
-    .section-customer-solution__body {
-        flex-direction: column;
-        gap: 20px;
-    }
+    }    
     .section-customer-solution__body .section-customer-solution__info,
     .section-customer-solution__body .section-customer-solution__content {
         width: 100%;
+    }
+    .section-customer-solution__body .section-customer-solution__content {
+        gap: 0;
     }
     .section-customer-solution__info .section-customer__detail p,
     .section-customer-solution__info .section-customer__description p {
@@ -128,5 +136,11 @@
     }
     .section-customer-solution__logo-image {
         padding-top: 24px;
+    }
+}
+@media (max-width: 425px) {
+    .section-customer-solution__body {
+        flex-direction: column;
+        gap: 20px;
     }
 }

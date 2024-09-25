@@ -39,6 +39,8 @@
   gap: 1.8rem 4rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   list-style: none;
+  max-width: 954px;
+  padding: 0;
 }
 
 .mega-menu__link {

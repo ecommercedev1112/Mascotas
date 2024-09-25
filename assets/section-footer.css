@@ -540,9 +540,20 @@
 }
 @media(max-width: 1024px) {
   .footer__blocks-wrapper {
-    width: 50%;
+    width: 60%;
     gap: 4rem;
     display: flex !important;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .footer-block--newsletter .footer-logo {
+    width: 45%;
+  }
+  .footer-block--newsletter {
+    width: 35%;
+  }
+  .footer-block__details-content>li:not(:last-child) {
+    margin-right: 1.5rem;
   }
 }
 @media(max-width: 768px) {

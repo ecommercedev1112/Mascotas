@@ -145,6 +145,7 @@
 
               {%- when 'modify_text' -%}
                 <div class="modify-section" {{ block.shopify_attributes }}>
+                  <h4>Customize your orders</h4>
                   {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                   {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
                     <p class="dog_info line-item-property__field">
@@ -172,7 +173,20 @@
                     </div>
                     <span class="describe">*All our clothes have both front and hind legs by default.</span>
                     <div class="customize-size">
-                      <p class="title accordion">Customize your Product</p>
+                      <p class="line-item-property__field line-3">
+                        <label>Choose Size</label><br>
+                        <select id="select-size" name="properties[Select Size]" form="product-form-{{ section.id }}">
+                          <option value="X-small">X-small</option>
+                          <option value="Small">Small</option>
+                          <option value="Medium">Medium</option>
+                          <option value="Large">Large</option>
+                          <option value="XL">XL</option>
+                          <option value="2XL">2XL</option>
+                          <option value="3XL">3XL</option>
+                          <option value="custom size">Customize your orders</option>
+                        </select>
+                      </p>
+                      <p class="title accordion show_accordion hidden">Customize your Product</p>
                       <div class="accordion-content">
                         <p class="title">Which size firts my furry friend?</p>
                         <p> In the size chart, we give examples of breeds to give an indication of each size.</p>
@@ -184,7 +198,45 @@
                           <p>3. <strong>Chest</strong> - measure widest point around the chest, going all the way around</p>
                         </div>
                         <div class="measure-table">
-                          <div class="header">
+                          <table style="width:100%">
+                            <tr>
+                              <th>1.Length</th>
+                              <th>2.Neck</th> 
+                              <th>3.Chest</th>
+                            </tr>
+                            <tr>
+                              <td>XS 22-26cm</td>
+                              <td>20-20cm</td>
+                              <td>30-35cm</td>
+                            </tr>
+                            <tr>
+                              <td>S 30-35cm</td>
+                              <td>25-40cm</td>
+                              <td>40-45cm</td>
+                            </tr>
+                            <tr>
+                              <td>M 35-40cm</td>
+                              <td>30-55cm</td>
+                              <td>45-50cm</td>
+                            </tr>
+                            <tr>
+                              <td>L 40-45cm</td>
+                              <td>35-65cm</td>
+                              <td>50-55cm</td>
+                            </tr>
+                            <tr>
+                              <td>XL 45-50cm</td>
+                              <td>40-70cm</td>
+                              <td>55-65cm</td>
+                            </tr>
+                            <tr>
+                              <td>XXL 60-65cm</td>
+                              <td>45-70cm</td>
+                              <td>65-70cm</td>
+                            </tr>
+                          </table> 
+
+                          {% comment %} <div class="header">
                             <p><strong>1.Length</strong></p>
                             <p class="length-size">XS 22-26cm</p>
                             <p class="length-size">S 30-35cm</p>
@@ -212,7 +264,7 @@
                             <p class="chest-size">50-55cm</p>
                             <p class="chest-size">55-65cm</p>
                             <p class="chest-size">65-70cm</p>
-                          </div>
+                          </div> {% endcomment %}
                         </div>
                         <p class="title-select">Does your furry friend have specifc measures? Tell us!</p>
                         <div class="size-forms">
@@ -223,14 +275,14 @@
                               <p class="line-item-property__field line-1">
                                 <input  value="Cm" id="unit" type="checkbox" name="properties[Unit(Length)]" form="product-form-{{ section.id }}" >
                                 <label for="unit">
-                                  <span class="sizee">Cm</span>
+                                  <span class="sizee">cm</span>
                                 </label>                
                               </p>
                               <p class="distance-symbol">/</p>
                               <p class="line-item-property__field line-1">
                                 <input value="Inch" id="unit1" type="checkbox" name="properties[Unit(Length)]" form="product-form-{{ section.id }}" >
                                 <label for="unit1">
-                                    <span class="sizee">Inch</span>
+                                    <span class="sizee">inch</span>
                                 </label>
                               </p>                
                             </div>
@@ -242,14 +294,14 @@
                               <p class="line-item-property__field line-1">
                                 <input  value="Cm" id="unit2" type="checkbox" name="properties[Unit(Neck)]" form="product-form-{{ section.id }}" >
                                 <label for="unit2">
-                                  <span class="sizee">Cm</span>
+                                  <span class="sizee">cm</span>
                                 </label>                
                               </p>
                               <p class="distance-symbol">/</p>
                               <p class="line-item-property__field line-1">
                                 <input value="Inch" id="unit3" type="checkbox" name="properties[Unit(Neck)]" form="product-form-{{ section.id }}" >
                                 <label for="unit3">
-                                    <span class="sizee">Inch</span>
+                                    <span class="sizee">inch</span>
                                 </label>
                               </p>                
                             </div>
@@ -262,14 +314,14 @@
                               <p class="line-item-property__field line-1">
                                 <input  value="Cm" id="unit4" type="checkbox" name="properties[Unit(Chest)]" form="product-form-{{ section.id }}" >
                                 <label for="unit4">
-                                  <span class="sizee">Cm</span>
+                                  <span class="sizee">cm</span>
                                 </label>                
                               </p>
                               <p class="distance-symbol">/</p>
                               <p class="line-item-property__field line-1">
                                 <input value="Inch" id="unit5" type="checkbox" name="properties[Unit(Chest)]" form="product-form-{{ section.id }}" >
                                 <label for="unit5">
-                                    <span class="sizee">Inch</span>
+                                    <span class="sizee">inch</span>
                                 </label>
                               </p>                
                             </div>
@@ -278,6 +330,10 @@
                       </div>
                     </div>
                     <style>
+                      table, th, td {
+                        border: 1px solid black;
+                        border-collapse: collapse;
+                      }
                       .d-flex1 {
                           display: flex;
                           justify-content: start;
@@ -290,7 +346,6 @@
                           position: absolute;
                       }
                       input#your-name {
-                        border-bottom: 1px solid #333 !important;
                         font-size: 18px;
                         padding: 0;
                         height: unset;
@@ -305,13 +360,23 @@
                         justify-content: center;
                       }
                       .d-flex1 p.line-item-property__field.line-1 label {
-                        border: 1px solid #000;
+                        border: 1px solid #b3adad;
                         padding: 0 4px;
                       }
                       .d-flex1 p.line-item-property__field.line-1 label span {
                         font-size: 16px;
                         color: #000;
                       }
+                      .product__info-wrapper .modify-section {
+                        margin-bottom: 0;
+                        border: 1px solid #ddd;
+                        padding: 0 20px 25px 20px;
+                      }
+                      .product__info-wrapper .modify-section h4 {
+                        font-weight: 700;
+                        text-transform: uppercase;
+                      } 
+
                       .modify-section .describe {
                         font-size: 14px;
                       }
@@ -382,14 +447,30 @@
                       }
                       @media(max-width: 768px) {
                         .d-flex1 p.line-item-property__field.line-1 label span {
-                          font-size: 15px;
+                          font-size: 14px;
                         }
                         input#your-name {
                           width: 160px;
                         }
+                        .product__info-wrapper .modify-section {
+                          padding: 0 10px 15px 10px;
+                        }
                       }
                     </style>
                     <script>
+                      document.querySelector('#select-size').addEventListener('change', function(e) {
+                        if(e.target.value === "custom size") {
+                          console.log(e.target.value, "===>")
+                          {% comment %} document.querySelector('.show_accordion').classList.remove('hidden');    {% endcomment %}
+                          document.querySelector('.accordion-content').classList.remove('hidden');                          
+                          document.querySelector('.show_accordion').click();                          
+                        } else {
+                          {% comment %} document.querySelector('.show_accordion').classList.add('hidden');                           {% endcomment %}
+                          document.querySelector('.accordion-content').classList.add('hidden');                          
+                          document.querySelector('.show_accordion').click();                          
+                        }
+                      })
+
                       const accordionBtns = document.querySelectorAll(".accordion");
                       accordionBtns.forEach((accordion) => {
                         accordion.onclick = function () {

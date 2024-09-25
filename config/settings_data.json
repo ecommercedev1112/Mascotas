@@ -544,7 +544,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "input#your-name {border-bottom: 1px solid #333;}",
+      "input#your-name {border-bottom: 1px solid #b3adad;}",
       "h1,.h1 {text-transform: uppercase;}",
       ".banner--desktop-transparent .banner__box {background-color: transparent;}",
       "@media screen and (max-width: 749px) {.banner:not(.banner--mobile-bottom):not(.email-signup-banner) .banner__box {background: #f3f0f0c9; margin: 40px; } h1, .h1 {font-size: 20px; }}",
@@ -556,7 +556,7 @@
       ".ecb-feature-item p {margin: 0; font-size: 11px;}",
       ".ecb-feature-item img {display: inline; padding: 20px;}",
       ".ecb-grid > div > .shopify-block {padding: 20px;}",
-      "#select-size {padding: 2px 0; width: 150px; font-size: 15px; border: unset; border-bottom: 1px solid #000; margin-left: 5px;}"
+      "#select-size {padding: 2px 0; width: 180px; font-size: 15px; border: unset; border-bottom: 1px solid #b3adad; margin-left: 5px;}"
     ]
   }
 }

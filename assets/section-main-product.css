@@ -974,6 +974,7 @@ a.product__text {
 
 .product-popup-modal__opener {
   display: inline-block;
+  margin-bottom: 0;
 }
 
 .product-popup-modal__button {
@@ -1681,7 +1682,7 @@ a.product__text {
   padding-top: 0;
 }
 .product__info-wrapper .product-form__quantity {
-  margin-top: 32px;
+  margin-top: 15px;
 }
 .product__info-wrapper .quantity__label {
   font-size: 18px;
@@ -1713,7 +1714,7 @@ a.product__text {
   border: unset;
 }
 .modify-section .dog_info label {
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
 }
 .modify-section .dog_info input {
@@ -1724,7 +1725,7 @@ a.product__text {
 }
 .modify-section .dog_info input.birthday-form {
   font-size: 18px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #b3adad;
   padding: 0 5px;
   text-transform: uppercase;
 }
@@ -1760,12 +1761,13 @@ a.product__text {
   align-items: start;
   flex-direction: column;
   gap: 20px;
+  padding-bottom: 20px;
 }
 .customize-size .size-forms .size-form__title {
   width: 65px;
 }
 .customize-size .size-forms input {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #b3adad;
   width: 50%;
   font-size: 16px;
   text-align: center;
@@ -1835,7 +1837,7 @@ a.product__text {
   background-color: white;
   border-left: 1px solid whitesmoke;
   border-right: 1px solid whitesmoke;
-  padding: 0;
+  padding: 0 15px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
@@ -1844,10 +1846,11 @@ a.product__text {
 .line-item-property__field.line-3 {
   display: flex;
   align-items: center;
-  margin-top: 0;
+  margin-top: 25px;
+  margin-bottom: 0;
 }
 .line-item-property__field.line-3 label {
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
 }
 @media(max-width: 768px) {
@@ -1865,7 +1868,11 @@ a.product__text {
   .product__info-wrapper .quantity__label,
   .product__info-wrapper .accordion__title,
   .modify-section .dog_info label,
-  .text-describe__wrapper .text-describe__wrapper-title .title {
+  .text-describe__wrapper .text-describe__wrapper-title .title,
+  .customize-size p.accordion,
+  .product-popup-modal__button,
+  .line-item-property__field.line-3 label,
+  .customize-size .measure-table p {
     font-size: 15px;
   }
   .text-describe__wrapper .text-describe__wrapper-title .value {
@@ -1886,9 +1893,6 @@ a.product__text {
   .product-page slider-component li.product__media-item {
     width: 100%;
   }
-  .customize-size .measure-table p {
-    font-size: 15px;
-  }
   .customize-size .size-forms {
     flex-direction: column;
     align-items: start;
@@ -1896,11 +1900,6 @@ a.product__text {
   }
   .customize-size .size-forms input {
     width: 30%;
-  }
-  .customize-size p.accordion,
-  .product-popup-modal__button,
-  .line-item-property__field.line-3 label {
-    font-size: 16px;
   }
   .customize-size .accordion-content {
     width: 100%;

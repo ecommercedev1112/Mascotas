@@ -444,9 +444,13 @@ table:not([class]) th {
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 768px) {
   .small-hide {
     display: none !important;
+  }
+  table:not([class]) td,
+  table:not([class]) th { 
+    padding: 0.5rem; 
   }
 }
 
@@ -1108,7 +1112,7 @@ summary::-webkit-details-marker {
 
   .slider--tablet.grid--peek.grid--2-col-tablet .grid__item,
   .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item {
-    width: calc(50% - var(--grid-desktop-horizontal-spacing) - 3rem);
+    width: calc(30% - var(--grid-desktop-horizontal-spacing) - 3rem);
   }
 
   .slider--tablet.grid--peek .grid__item:first-of-type {

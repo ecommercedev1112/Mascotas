@@ -506,6 +506,12 @@
 .card__information  .color-swatches__wrapper {
   padding-bottom: 0;
 }
+@media (min-width: 769px) and (max-width:1024px) {
+  .section-image-text {
+      padding: 0;
+      width: calc(33% - 24px);
+  }
+}
 @media(max-width: 768px) {
   .card__heading a {
     font-size: 18px;
