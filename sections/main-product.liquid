@@ -297,6 +297,32 @@
                             </div>
                           </div>
                         </div>
+                        <div class="image-upload__wrapper">
+                          <div class="image-upload">
+                            <div class="hero">
+                              <p>Image1</p>
+                              <div class="card">
+                                <div class="image__wrapper">
+                                  <img src="{{ product.featured_image | img_url: "master" }}" alt="customer-image" width="{{ product.featured_image.width }}" height="{{product.featured_image.height}}" id="custom-image__first">
+                                </div>
+                                <label for="input-file__first">Upload image</label>
+                                <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file__first">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="image-upload">
+                            <div class="hero">
+                              <p>Image2</p>
+                              <div class="card">
+                                <div class="image__wrapper">
+                                  <img src="{{ product.featured_image | img_url: "master" }}" alt="customer-image" width="{{ product.featured_image.width }}" height="{{product.featured_image.height}}" id="custom-image__second">
+                                </div>
+                                <label for="input-file__second">Upload image</label>
+                                <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file__second">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <style>
@@ -453,6 +479,16 @@
                           console.log(e.target.value, "close===>")
                         }
                       })
+                      let customImageFirst = document.querySelector('#custom-image__first');
+                      let inputImageFirst = document.querySelector('#input-file__first');
+                      inputImageFirst.onchange = function() {
+                        customImageFirst.src = URL.createObjectURL(inputImageFirst.files[0]);
+                      }
+                      let customImageSed = document.querySelector('#custom-image__second');
+                      let inputImageSed = document.querySelector('#input-file__second');
+                      inputImageSed.onchange = function() {
+                        customImageSed.src = URL.createObjectURL(inputImageSed.files[0]);
+                      }
                     </script>
                     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                     {{ form | payment_terms }}

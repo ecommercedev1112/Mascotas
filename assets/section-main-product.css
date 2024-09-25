@@ -1839,6 +1839,44 @@ a.product__text {
   font-size: 16px;
   color: #000;
 }
+.image-upload__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.image-upload__wrapper .image-upload {
+  width: calc(50% - 12px);
+}
+.image-upload__wrapper .image-upload p {
+  text-align: center;
+  margin: 15px;
+  font-size: 20px;
+  color: #000;
+}
+
+.image-upload__wrapper .image-upload input {
+  display: none;
+}
+.image-upload__wrapper .image-upload label {
+  color: #000;
+  border: 1px solid #b3adad;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+.image-upload__wrapper .image-upload .image__wrapper {
+  width: 100%;
+  height: 100%;
+}
+.image-upload__wrapper .image-upload .image__wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 0.75;
+}
 @media(max-width: 989px) {
   .product.grid {
     gap: 40px;
@@ -1898,17 +1936,25 @@ a.product__text {
     margin-right: auto;
     margin-left: auto;
   }
-
   .product-media-container.media-fit-cover {
     display: flex;
     align-self: stretch;
   }
-
   .product-media-container.media-fit-cover .media {
     /* allow media img element to scale relative to modal-opener/product-media-container */
     position: initial;
   }
   .product-media-container.constrain-height.media-fit-contain {
     width: 100%;
+  }
+  .image-upload__wrapper .image-upload label {
+    width: 90%;
+  }
+  .image-upload__wrapper .image-upload {
+    width: calc(50% - 6px);
+  }
+  .image-upload__wrapper .image-upload p {
+    font-size: 18px;
+    margin: 10px;
   }
 }
