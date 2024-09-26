@@ -512,6 +512,12 @@
       width: calc(33% - 24px);
   }
 }
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .product-card-wrapper .card__inner {
+    aspect-ratio: 0.8;
+    height: 100%;
+  }
+}
 @media(max-width: 768px) {
   .card__heading a {
     font-size: 18px;

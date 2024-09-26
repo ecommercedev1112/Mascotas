@@ -1877,6 +1877,14 @@ a.product__text {
   object-fit: cover;
   aspect-ratio: 0.75;
 }
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .product__media img {
+    object-fit: contain;
+  }
+  .product-media-container.constrain-height .media {
+    padding-top: 70%;
+  }
+}
 @media(max-width: 989px) {
   .product.grid {
     gap: 40px;

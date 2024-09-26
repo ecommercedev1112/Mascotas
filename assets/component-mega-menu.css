@@ -52,6 +52,7 @@
   text-decoration: none;
   transition: text-decoration var(--duration-short) ease;
   word-wrap: break-word;
+  font-size: 18px;
 }
 
 .mega-menu__link--level-2 {
@@ -88,4 +89,10 @@
 
 .mega-menu__list--condensed .mega-menu__link {
   font-weight: normal;
+  font-size: 18px;
+}
+@media(max-width: 768px) {
+  .mega-menu__list--condensed .mega-menu__link {
+    font-size: 15px;
+  }
 }

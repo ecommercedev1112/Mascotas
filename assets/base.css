@@ -3286,7 +3286,7 @@ details-disclosure > details {
   scale: var(--zoom-in-ratio);
 }
 
-@media(max-width: 768px) {
+@media(max-width: 750px) {
   .page-width {
     padding: 0 1.5rem;
   }
@@ -3535,26 +3535,34 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
 @font-face {
-    font-family: 'Cinzel-Medium';
-    src: url({{"Cinzel-Medium" | asset_url}}) format('woff2'),
-    src: url({{ "Cinzel-Medium" | asset_url }}) format('woff2'),
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Cinzel-Medium';
+  src: url({{"Cinzel-Medium" | asset_url}}) format('woff2'),
+  src: url({{ "Cinzel-Medium" | asset_url }}) format('woff2'),
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
-    font-family: 'Cinzel-Regular';
-    src: url({{"Cinzel-Regular" | asset_url}}) format('woff2'),
+  font-family: 'Cinzel-Regular';
+  src: url({{"Cinzel-Regular" | asset_url}}) format('woff2'),
+}
 
-      @font-face {
-    font-family: 'Outfit-VariableFont_wght';
-    src: url({{"Outfit-VariableFont_wght" | asset_url}}) format('woff2'),
-      
-.d-flex1{font-size:12px;}
+@font-face {
+  font-family: 'Outfit-VariableFont_wght';
+  src: url({{"Outfit-VariableFont_wght" | asset_url}}) format('woff2'),
 
-#mobile-heading{width:40%; margin-top: -120px !important;
-    padding-bottom: 49px !important;
-    padding-left: 30px;}
-#mobile-title, h1{width:40%; font-size:13px !important; font-weight:bold;}  
-.mobile-d1{width:40%; font-size:12px;}
+  .d-flex1{font-size:12px;}
+
+  #mobile-heading{width:40%; margin-top: -120px !important;
+  padding-bottom: 49px !important;
+  padding-left: 30px;}
+  #mobile-title, h1{width:40%; font-size:13px !important; font-weight:bold;}  
+  .mobile-d1{width:40%; font-size:12px;}
+}
+
+.collection .variant-color-swatch .item_size_ {
+  display: none;
+}
