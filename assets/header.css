@@ -61,6 +61,18 @@
     text-decoration: none;
     width: 40%;
 }
+.header-wishlist.header__icon.swym-wishlist {
+    width: 20%;
+    gap: 2px;
+    text-decoration: none;
+    background-color: #fff;
+    border: unset;
+    cursor: pointer;
+}
+.header-wishlist .icon__white-wishlist {
+    width: 18px;
+    height: 18px;
+}
 @media (min-width: 769px) and (max-width: 990px) {
     .header {
         flex-direction: row;
