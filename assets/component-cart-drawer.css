@@ -179,6 +179,7 @@ cart-drawer {
 .cart-drawer tbody {
   display: block;
   width: 100%;
+  border: unset;
 }
 
 .cart-drawer thead {
@@ -192,6 +193,7 @@ cart-drawer {
 cart-drawer-items {
   overflow: auto;
   flex: 1;
+  overflow-x: hidden;
 }
 
 @media screen and (max-height: 650px) {
@@ -298,7 +300,9 @@ cart-drawer-items {
   padding-top: 0;
   grid-column: 2 / 5;
 }
-
+.cart-item__price-wrapper {
+  padding-top: 5px;
+}
 @media screen and (max-width: 749px) {
   .cart-drawer .cart-item cart-remove-button {
     margin-left: 0;
@@ -414,4 +418,74 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   .cart-drawer .cart-item__error {
     margin-left: 0;
   }
+}
+.custom-upsell-wrap {
+  padding-top: 20px;
+  padding-right: 12px;
+}
+.custom-upsell-wrap h4 {
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 20px !important;
+}
+.custom-upsell-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.custom-upsell-col {
+  width: calc(33% - 5px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.upsell-content {
+  padding: 0 5px;
+}
+.upsell-img {
+  width: 100%;
+  height: 50%;
+}
+.upsell-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.upsell-item-title {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  line-height: 18px;
+}
+.upsell-item-title span {
+  text-align: left;
+  max-height: 36px;
+  overflow: hidden;
+}
+.upsell-price {
+  display: flex;
+  margin-top: 5px;
+}
+.upsell-price span {
+  font-size: 12px;
+}
+.upsell-button {
+  width: 95%;
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+}
+.upsell-button button {
+  width: 100%;
+  padding: 3px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.cart-item__quantity-wrapper .swym-button-bar {
+  display: none;
+}
+.cart-item__quantity-wrapper .quantity__button {
+  border: unset;
 }

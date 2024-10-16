@@ -1,0 +1,26 @@
+{% assign last_item = cart.items.first %}
+{% if last_item.product.metafields.custom.upsell_product.value != blank %}
+<div class="custom-upsell-wrap">
+    <div class="custom-upsell-inner">
+            <h4>Picked for you</h4>            
+       <div class="custom-upsell-row">
+        {% for product in last_item.product.metafields.custom.upsell_product.value %}
+            <div class="custom-upsell-col">
+               <div class="upsell-img">
+                  <img src="{{ product.featured_image | img_url: "master" }}" alt="image" width="{{ product.featured_image.widht }}" height="{{ product.featured_image.height }}">
+               </div>
+               <div class="upsell-content">
+                  <a href="#" class="upsell-item-title"><span class="small14">{{ product.title }}</span></a>
+                  <div class="upsell-price">
+                     <span class="small14">{{ product.price | money }}</span>
+                  </div>
+                  <a href="{{ product.url }}" class="upsell-button"><button>Add</button></a>
+               </div>
+            </div>            
+        {% endfor %}
+       </div> 
+    </div>
+ </div>
+{% endif %}
+ 
+ 
