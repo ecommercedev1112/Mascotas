@@ -9,7 +9,7 @@
         margin: 2px;
         position: relative;
         border-radius: 50%;
-        border: none !important;
+        border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
         background-color: {{ block.settings.color }} !important;
         {% if block.settings.image != blank %}
           background-image: url('{{ block.settings.image | img_url: '16px' }}') !important;
@@ -20,10 +20,6 @@
       [data-color-name="{{ color_name }}"]:checked + label::after {
         border: 1px solid #000 !important;
         display: inline-block;
-      }
-      [data-color-name="White"],
-      [data-color-name="White"] > label {
-        border: 1px solid #e2e2e2 !important;
       }
       .color-swatches__wrapper {
         display: flex;
@@ -44,9 +40,45 @@
         color: #000;
       }
     {% endfor %}
-  </style>
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.color-swatches__wrapper .color_EnableStock_').forEach( item => {
+      const colorName = item.getAttribute('data-color-name');
+      if (colorName.indexOf('&') !== -1) {
+        const colors = colorName.split(' & ');
+        if (window.matchMedia("(max-width: 768px)").match) {
+          item.style.width = '32px';
+          item.style.height = '32px';
+        } else {
+          item.style.width = '0px';
+          item.style.height = '0px';
+        }
+        item.style.borderRadius = '50%';
+        if (colors[1] == 'Beige') {
+          colors[1] = '#DDBF99'
+        }
+        if (colors[1] == 'Blue') {
+          colors[1] = '#012350'
+        }
+        if (colors[1] == 'Pink') {
+          colors[1] = '#FDCED6'
+        }
+        if (colors[0] == 'Ivory') {
+          colors[1] = '#EDE1BC'
+        }
+        item.style.background = `linear-gradient(to right, ${colors[0]} 50%, ${colors[1]} 50%)`;
+      } 
   
-  {% schema %}
+    })
+  });
+
+  
+
+</script>
+  
+{% schema %}
   {
     "name": "Color swatch",
     "class": "color-swatch",
@@ -81,5 +113,5 @@
       }
     ]
   }
-  {% endschema %}
+{% endschema %}
   

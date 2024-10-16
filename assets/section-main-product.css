@@ -1705,6 +1705,7 @@ a.product__text {
 }
 .modify-section .dog_info input {
   border: unset;
+  border-bottom: 1px solid #b3adad;
 }
 .modify-section .dog_info input:focus-visible {
   outline: unset;

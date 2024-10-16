@@ -187,7 +187,7 @@
             </div>
 
             <div class="product-count-vertical light" role="status">
-              <h2 class="product-count__text text-body">
+              <h4 class="product-count__text text-body">
                 <span id="ProductCountDesktop">
                   {%- if search.results_count -%}
                     {{ 'templates.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
@@ -200,7 +200,7 @@
                     }}
                   {%- endif -%}
                 </span>
-              </h2>
+              </h4>
               {%- render 'loading-spinner' -%}
             </div>
           </form>

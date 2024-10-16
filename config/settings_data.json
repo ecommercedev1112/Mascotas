@@ -150,13 +150,6 @@
               "color": "#000000"
             }
           },
-          "color_dAUCDi": {
-            "type": "color",
-            "settings": {
-              "title": "Lilac",
-              "color": "#a47dab"
-            }
-          },
           "color_dqqHrR": {
             "type": "color",
             "settings": {
@@ -199,13 +192,6 @@
               "color": "#ffffff"
             }
           },
-          "color_fGGCEG": {
-            "type": "color",
-            "settings": {
-              "title": "Blue",
-              "color": "#012350"
-            }
-          },
           "color_pPLJGf": {
             "type": "color",
             "settings": {
@@ -217,35 +203,14 @@
             "type": "color",
             "settings": {
               "title": "Lavender",
-              "color": "#d3d3ff"
+              "color": "#b47bda"
             }
           },
           "color_YPRwTE": {
             "type": "color",
             "settings": {
               "title": "Nude",
-              "color": "#f7d9bc"
-            }
-          },
-          "color_tj3RWT": {
-            "type": "color",
-            "settings": {
-              "title": "Black & Pink",
-              "color": "#000000"
-            }
-          },
-          "color_HVBBqd": {
-            "type": "color",
-            "settings": {
-              "title": "Dark Green",
-              "color": "#495744"
-            }
-          },
-          "color_QHpaki": {
-            "type": "color",
-            "settings": {
-              "title": "Gray",
-              "color": "#6b6961"
+              "color": "#c8a69d"
             }
           },
           "color_Rkkpwp": {
@@ -255,18 +220,18 @@
               "color": "#91aba0"
             }
           },
-          "color_ihbFxq": {
+          "color_HVBBqd": {
             "type": "color",
             "settings": {
-              "title": "Militar Green",
-              "color": "#6d7b52"
+              "title": "Dark Green",
+              "color": "#495744"
             }
           },
-          "color_Mc3d6t": {
+          "color_tj3RWT": {
             "type": "color",
             "settings": {
-              "title": "Pink & Black",
-              "color": "#fdced6"
+              "title": "Black & Pink",
+              "color": "#000000"
             }
           },
           "color_Gjj7p7": {
@@ -276,44 +241,63 @@
               "color": "#ede1bc"
             }
           },
-          "color_KtBpNA": {
+          "color_EnqqK8": {
             "type": "color",
             "settings": {
-              "title": "Melange",
-              "color": "#edecf3"
+              "title": "Pink & Black",
+              "color": "#fdced6"
             }
           },
-          "color_tmAGkg": {
+          "color_3VfnR7": {
             "type": "color",
             "settings": {
-              "title": "Brown",
+              "title": "Black & White",
+              "color": "#000000"
+            }
+          },
+          "color_a8LHTj": {
+            "type": "color",
+            "settings": {
+              "title": "White & Beige",
               "color": "#ddbf99"
+            }
+          },
+          "color_LDJyaJ": {
+            "type": "color",
+            "settings": {
+              "title": "White & Black",
+              "color": "#ffffff"
+            }
+          },
+          "color_Qn4LW4": {
+            "type": "color",
+            "settings": {
+              "title": "White & Blue",
+              "color": "#012350"
             }
           }
         },
         "block_order": [
           "color_BBNwnK",
           "color_bnF8A9",
-          "color_dAUCDi",
           "color_dqqHrR",
           "color_H4nAkh",
           "color_79gyLb",
           "color_jtiGfr",
           "color_ic6PQw",
           "color_KPEpEU",
-          "color_fGGCEG",
           "color_pPLJGf",
           "color_bidFeN",
           "color_YPRwTE",
-          "color_tj3RWT",
-          "color_HVBBqd",
-          "color_QHpaki",
           "color_Rkkpwp",
-          "color_ihbFxq",
-          "color_Mc3d6t",
+          "color_HVBBqd",
+          "color_tj3RWT",
           "color_Gjj7p7",
-          "color_KtBpNA",
-          "color_tmAGkg"
+          "color_EnqqK8",
+          "color_3VfnR7",
+          "color_a8LHTj",
+          "color_LDJyaJ",
+          "color_Qn4LW4"
         ],
         "settings": {
         }
@@ -616,7 +600,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "input#your-name {border-bottom: 1px solid #b3adad;}",
+      "input.input-text {border-bottom: 1px solid #b3adad;}",
       "h1,.h1 {text-transform: uppercase;}",
       ".banner--desktop-transparent .banner__box {background-color: transparent;}",
       "@media screen and (max-width: 749px) {.banner:not(.banner--mobile-bottom):not(.email-signup-banner) .banner__box {background: #f3f0f0c9; margin: 40px; } h1, .h1 {font-size: 20px; }}",

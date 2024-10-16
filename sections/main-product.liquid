@@ -151,12 +151,16 @@
                   {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
                     <p class="dog_info line-item-property__field">
                       <label for="Add Your Pet Name">Your Pet’s Name: </label>
-                      <input id="your-name" type="text" name="properties[Add Your Pet Name]" form="product-form-{{ section.id }}">
+                      <input class="input-text" id="your-name" type="text" name="properties[Add Your Pet Name]" form="product-form-{{ section.id }}">
                     </p>
                     
                     <p class="dog_info line-item-property__field line-2">
                       <label for="Birthday">Birthday: </label>
                       <input type="date" name="properties[date]" value="product.attributes[date]" form="product-form-{{ section.id }}" class="birthday-form">
+                    </p>
+                    <p class="dog_info line-item-property__field line-2">
+                      <label for="Birthday">Your Pet's Breed: </label>
+                      <input class="input-text" type="text" name="properties[breed]" form="product-form-{{ section.id }}">
                     </p>
                     <div class="d-flex1">
                       <p class="line-item-property__field line-1">
@@ -323,7 +327,6 @@
                                 <label for="input-file__second">
                                   {% render 'icon-upload' %}
                                   <span>Upload your files here</span>
-
                                 </label>
                                 <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file__second">
                               </div>
@@ -348,12 +351,12 @@
                           overflow: hidden;
                           position: absolute;
                       }
-                      input#your-name {
+                      input.input-text {
                         font-size: 18px;
                         padding: 0;
                         height: unset;
                         width: max-content;
-                        margin-left: 8px;
+                        margin-left: 8px;                        
                       }
                       .d-flex1 p.line-item-property__field.line-1 {
                         margin: 0px 12px 0 0;
@@ -454,7 +457,7 @@
                         .d-flex1 p.line-item-property__field.line-1 label span {
                           font-size: 14px;
                         }
-                        input#your-name {
+                        input.input-text {
                           width: 160px;
                         }
                         .product__info-wrapper .modify-section {

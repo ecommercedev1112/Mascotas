@@ -176,7 +176,7 @@
                                   </div>
                                 {%- endfor -%}
                               {%- endif -%}
-
+                              <script>console.log({{ item.properties | json }})</script>
                               {%- for property in item.properties -%}
                                 {%- assign property_first_char = property.first | slice: 0 -%}
                                 {%- if property.last != blank and property_first_char != '_' -%}
