@@ -302,7 +302,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="image-upload__wrapper">
+                        {% comment %} <div class="image-upload__wrapper">
                           <div class="image-upload">
                             <div class="hero">
                               <div class="card image-first">
@@ -332,7 +332,7 @@
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div> {% endcomment %}
                       </div>
                     </div>
                     <style>
@@ -489,7 +489,7 @@
                           console.log(e.target.value, "close===>")
                         }
                       })
-                      let customImageFirst = document.querySelector('#custom-image__first');
+                      {% comment %} let customImageFirst = document.querySelector('#custom-image__first');
                       let inputImageFirst = document.querySelector('#input-file__first');
                       inputImageFirst.onchange = function() {
                         customImageFirst.src = URL.createObjectURL(inputImageFirst.files[0]);
@@ -502,7 +502,7 @@
                         customImageSed.src = URL.createObjectURL(inputImageSed.files[0]);
                         this.closest('.image-second').querySelector(".image-upload label").classList.add('hidden');
                         this.closest('.image-second').classList.add('remove-padding');
-                      }
+                      } {% endcomment %}
                       document.querySelector('.product-wishlist').addEventListener('click', function(e) {
                         e.preventDefault();
                         console.log("wishlist ==>");
@@ -1078,6 +1078,56 @@
       }
     </script> 
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('previewSuccess', function(e) {
+          const preview = e.detail.preview;
+          if (preview === '') {
+              return;
+          }
+  
+          const title = document.createElement('p');
+          title.innerHTML = 'Preview:';
+          
+          const img = document.createElement('img');
+          img.setAttribute('src', preview);
+          
+          const uploaderyResponse = document.createElement('div');
+          uploaderyResponse.className = 'uploaderyResponse';
+          uploaderyResponse.appendChild(title);
+          uploaderyResponse.appendChild(img);
+  
+          const targetForm = e.target;
+          const existingResponse = targetForm.nextElementSibling;
+  
+          // Remove existing response if it exists
+          if (existingResponse && existingResponse.classList.contains('uploaderyResponse')) {
+              existingResponse.remove();
+          }
+  
+          targetForm.parentNode.insertBefore(uploaderyResponse, targetForm.nextSibling);
+      });
+  
+      document.addEventListener('uploadSuccess', function(e) {
+          const file = e.detail.file;
+          let uploaderyFileName = file.match(/[^\/]+$/)[0];
+          uploaderyFileName = uploaderyFileName.substr(uploaderyFileName.indexOf('-') + 1);
+  
+          const uploaderyActiveField = e.target;
+          uploaderyActiveField.classList.add('upload-complete');
+  
+          // Insert new / update existing
+          const div = uploaderyActiveField.querySelector('div');
+          if (div.childNodes[0].nodeType === Node.TEXT_NODE) {
+              div.childNodes[0].nodeValue = uploaderyFileName;
+          } else {
+              const uploaderyFileNameNode = document.createTextNode(uploaderyFileName);
+              uploaderyActiveField.insertBefore(uploaderyFileNameNode, uploaderyActiveField.querySelector('input'));
+          }
+      });
+  });
+  
+  </script>
 </section>
 
 {% schema %}

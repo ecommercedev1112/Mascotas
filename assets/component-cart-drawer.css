@@ -114,7 +114,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 .drawer__footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.2);
-  padding: 1.5rem 0;
+  padding: 0 0 1.5rem 0;
 }
 
 cart-drawer-items.is-empty + .drawer__footer {
@@ -194,6 +194,7 @@ cart-drawer-items {
   overflow: auto;
   flex: 1;
   overflow-x: hidden;
+  padding-right: 10px;
 }
 
 @media screen and (max-height: 650px) {
@@ -303,12 +304,6 @@ cart-drawer-items {
 .cart-item__price-wrapper {
   padding-top: 5px;
 }
-@media screen and (max-width: 749px) {
-  .cart-drawer .cart-item cart-remove-button {
-    margin-left: 0;
-  }
-}
-
 .cart-drawer__footer > * + * {
   margin-top: 1rem;
 }
@@ -322,7 +317,7 @@ cart-drawer-items {
 }
 
 .cart-drawer .tax-note {
-  margin: 1.2rem 0 1rem auto;
+  margin: 0.8rem 0;
   text-align: left;
 }
 
@@ -339,8 +334,17 @@ cart-drawer-items {
   border: 1px solid #000;
   background-color: #000;
   color: #fff;
+  text-transform: uppercase;
 }
-
+.cart-drawer .cart__back-button {
+  width: 100%;
+  color: #000;
+  border: 1px solid #000;
+  margin-top: 15px;
+  max-height: unset;
+  min-height: unset;
+  padding: 1.1rem 0;
+}
 .drawer__footer .cart__dynamic-checkout-buttons {
   max-width: 100%;
 }
@@ -421,7 +425,6 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 .custom-upsell-wrap {
   padding-top: 20px;
-  padding-right: 12px;
 }
 .custom-upsell-wrap h4 {
   text-transform: uppercase;
@@ -472,20 +475,31 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   font-size: 12px;
 }
 .upsell-button {
-  width: 95%;
+  width: 100%;
   display: block;
   margin: auto;
   margin-top: 5px;
 }
 .upsell-button button {
   width: 100%;
-  padding: 3px 0;
+  padding: 5px 0;
   text-transform: uppercase;
   cursor: pointer;
+  border: 1px solid #333;
+  font-size: 12px;
+  background-color: unset;
 }
 .cart-item__quantity-wrapper .swym-button-bar {
   display: none;
 }
 .cart-item__quantity-wrapper .quantity__button {
   border: unset;
+}
+@media screen and (max-width: 749px) {
+  .cart-drawer .cart-item cart-remove-button {
+    margin-left: 0;
+  }
+  .cart-drawer .cart-item {
+    gap: 0.2rem;
+  }
 }

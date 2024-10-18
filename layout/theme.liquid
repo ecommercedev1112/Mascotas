@@ -3,8 +3,8 @@
   <head>
     <meta name="google-site-verification" content="8Rtt6Ith2ZKT-pwUywvgLLlu9sTJQFsDvZDmQgCoUCk" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -46,7 +46,7 @@
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
-
+    <script src='//d1liekpayvooaz.cloudfront.net/apps/uploadery/uploadery.js?shop={{shop.permanent_domain}}'></script>
     {{ 'swiper.min.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'swiper.min.js' | asset_url }}"></script>
 

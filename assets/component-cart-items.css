@@ -125,7 +125,9 @@ cart-items .title-wrapper-with-link {
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   text-align: left;
 }
-
+.product-option dd a {
+  color: #313030;
+}
 .cart-item cart-remove-button {
   display: flex;
   margin-left: 1rem;
@@ -225,55 +227,6 @@ cart-remove-button .icon-remove {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 749px) {
-  .cart-items,
-  .cart-items thead,
-  .cart-items tbody {
-    display: block;
-    width: 100%;
-  }
-
-  .cart-items thead tr {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
-    margin-bottom: 4rem;
-  }
-
-  .cart-item {
-    display: grid;
-    grid-template: repeat(2, auto) / repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 3.5rem;
-  }
-
-  .cart-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .cart-item__media {
-    grid-row: 1 / 3;
-  }
-
-  .cart-item__details {
-    grid-column: 2 / 4;
-  }
-
-  .cart-item__quantity {
-    grid-column: 2 / 5;
-  }
-
-  .cart-item__quantity-wrapper {
-    flex-wrap: wrap;
-  }
-
-  .cart-item__totals {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-  }
-}
-
 @media screen and (min-width: 750px) {
   .cart-items {
     border-spacing: 0;
@@ -363,5 +316,59 @@ cart-remove-button .icon-remove {
 @media screen and (min-width: 749px) and (max-width: 990px) {
   .cart-items .quantity-popover__info-button {
     padding-left: 1.5rem;
+  }
+}
+@media screen and (max-width: 749px) {
+  .cart-items,
+  .cart-items thead,
+  .cart-items tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .cart-items thead tr {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
+    margin-bottom: 4rem;
+  }
+
+  .cart-item {
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .cart-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .cart-item__media {
+    grid-row: 1 / 3;
+  }
+
+  .cart-item__details {
+    grid-column: 2 / 4;
+  }
+
+  .cart-item__quantity {
+    grid-column: 2 / 5;
+  }
+
+  .cart-item__quantity-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .cart-item__totals {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  cart-remove-button .button {
+    min-height: unset;
+  }
+  .free_shipping_notice {
+    font-size: 14px;
   }
 }

@@ -176,23 +176,19 @@
                                   </div>
                                 {%- endfor -%}
                               {%- endif -%}
-                              <script>console.log({{ item.properties | json }})</script>
                               {%- for property in item.properties -%}
                                 {%- assign property_first_char = property.first | slice: 0 -%}
                                 {%- if property.last != blank and property_first_char != '_' -%}
                                   <div class="product-option">
-                                    <dt>{{ property.first }}:</dt>
+                                    {% if property.first contains 'uploadery' %}
+                                      <dt style="display: none;">{{ property.first }}:</dt>
+                                    {% else %}
+                                      <dt>{{ property.first }}:</dt>
+                                    {% endif %}
                                     <dd>
-                                      {%- if property.last contains '/uploads/' -%}
-                                        <a
-                                          href="{{ property.last }}"
-                                          class="link"
-                                          target="_blank"
-                                          aria-describedby="a11y-new-window-message"
-                                        >
-                                          {{ property.last | split: '/' | last }}
-                                        </a>
-                                      {%- else -%}
+                                      {% if property.last contains '//uploadery.s3' %}
+                                        <a href="{{ property.last }}">Your Image</a>
+                                      {% else %}
                                         {{ property.last }}
                                       {%- endif -%}
                                     </dd>
@@ -488,7 +484,7 @@
           </div>
 
           <div class="totals" role="status">
-            <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
+            <h4 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h4>
             <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
           </div>
 
@@ -526,6 +522,13 @@
           >
             {{ 'sections.cart.checkout' | t }}
           </button>
+        </div>
+        <div class="cart__back">
+          <a href="{{ routes.collections_url }}"
+            class="cart__back-button button"
+          >
+            {{ 'sections.cart.back_cart' | t }}
+          </a>
         </div>
       </div>
     </div>

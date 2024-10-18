@@ -123,6 +123,11 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
+        },
+        "uploadery_app_block_gTnWJj": {
+          "type": "shopify:\/\/apps\/uploadery\/blocks\/app-block\/5253cb5d-9d0f-47bd-a1aa-51cb83bf6de3",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -143,7 +148,8 @@
         "quantity_selector",
         "text_describe_LYJ9fT",
         "collapsible_tab_mgRjd6",
-        "buy_buttons"
+        "buy_buttons",
+        "uploadery_app_block_gTnWJj"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -151,7 +157,7 @@
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "thumbnail",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "hover",
         "mobile_thumbnails": "hide",
